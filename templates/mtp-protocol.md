@@ -1,7 +1,8 @@
 # MTP Protocol Authoring Template
 
 > The MTP is not a poster. It is a protocol.
-> Output: a three-layer machine-readable MTP that passes both litmus tests.
+> Output: a three-layer machine-readable MTP that passes all three litmus tests (v24 adds the third, the Identity Layer test).
+> The failure mode this protocol prevents is the **Agentic Fidelity Paradox** (Delphi Group, 2026): "the more precisely agents adhere to predefined procedure, the less capable they become on novel problems." Encode purpose, not procedure, and let GOVERN catch the drift.
 
 **Firm:** _______________________________________
 **Authored by:** _______________________________________
@@ -55,15 +56,16 @@ ___________________________________________________________
 
 > Add tradeoffs unique to this firm. The Decision Layer should be specific enough that two agents reading it independently arrive at the same call.
 
-## 3. Identity Layer: Cultural Cohesion
+## 3. Identity Layer: Cultural Cohesion (with explicit disqualifiers)
 
-> The cultural cohesion mechanism that replaces "the office." When agents handle coordination, humans lose the incidental bonds traditional work provided. Shared purpose, visible impact, and the knowledge that your judgment shapes outcomes is what binds top talent. Compensation alone is insufficient.
+> The cultural cohesion mechanism that replaces "the office." When agents handle coordination, humans lose the incidental bonds traditional work provided. v24 requirement: the Identity Layer carries **explicit disqualifiers**, the values and motivations that make someone a poor fit, alongside the affirmative pull. A purpose specific enough to exclude; one that includes everyone binds no one.
+> This layer is also the firm's answer to the Binding Problem (retention-by-resonance): Consequence, Legibility, Identity, with compensation as hygiene. See `references/shape-form.md`.
 
-**Why a high-judgment human stays here:**
+**Why a high-judgment human stays here (Consequence: what their judgment governs):**
 ___________________________________________________________
 ___________________________________________________________
 
-**What is visible (impact, judgment, contribution):**
+**What is visible (Legibility: impact, judgment, contribution, engineered into view):**
 ___________________________________________________________
 ___________________________________________________________
 
@@ -71,10 +73,11 @@ ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
 
-**Identity disqualifiers (we are not for):**
+**Identity disqualifiers (who the organization is not for):**
+___________________________________________________________
 ___________________________________________________________
 
-## Litmus Tests
+## Litmus Tests (three in v24)
 
 ### Test 1: Endorsement Test
 
@@ -98,7 +101,7 @@ Test scenarios:
 
 ### Test 2: Refusal Test
 
-> *Could that agent, given only this MTP, decide what NOT to build?*
+> *Could that agent, given only this MTP, decide what NOT to build?* When execution is nearly free, the feature factory becomes the dominant failure mode.
 
 Test scenarios (proposed features the agent should refuse):
 
@@ -113,7 +116,21 @@ Test scenarios (proposed features the agent should refuse):
 
 **Test 2 result:** ☐ PASS ☐ FAIL
 
-> If either test fails, return to authoring. The MTP is not yet a protocol.
+### Test 3: Identity Layer Test (new in v24)
+
+> *Could a high-judgment human, reading only your Identity Layer, answer why they stay, what their contribution makes visible, and who the organization is not for?*
+
+Run it with a real reader, not the authoring team:
+
+1. Reader (role): _______________________________________
+   Why they stay (their answer): _______________________________________
+   What their contribution makes visible (their answer): _______________________________________
+   Who the organization is not for (their answer): _______________________________________
+   All three answerable from the Identity Layer alone? ☐ Yes ☐ No
+
+**Test 3 result:** ☐ PASS ☐ FAIL
+
+> If any test fails, return to authoring. The MTP is not yet a protocol.
 
 ## Distribution
 
@@ -125,4 +142,4 @@ Test scenarios (proposed features the agent should refuse):
 
 ## Source Attribution
 
-The three-layer MTP-as-protocol construct is from ExO 3.0, published in *The Organizational Singularity* (OS Outline v13, May 2026, Chapter 3 and SHAPE Component P), authored by Salim Ismail with contributors. The original MTP construct is from *Exponential Organizations* (Ismail, Malone, van Geest, 2014).
+The three-layer MTP-as-protocol construct is from ExO 3.0, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 3, SHAPE Component P), authored by Salim Ismail with contributors. v24 adds the explicit Identity Layer disqualifiers, the third Purpose Litmus Test, and the Agentic Fidelity Paradox framing (Delphi Group, 2026). The original MTP construct is from *Exponential Organizations* (Ismail, Malone, van Geest, 2014).

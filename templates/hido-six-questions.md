@@ -1,8 +1,22 @@
-# HIDO: The Six-Question Data Object Diagnostic
+# The Six-Question Data Object Diagnostic (HIDO)
 
 > **The data spec is the contract. No spec, no agent action.**
-> Symmetric to the eight-property Agent Specification: the agent spec governs *who is allowed to act and how*; the HIDO spec governs *what may be done with each piece of evidence*.
+> Symmetric to the eight-property Agent Specification: the agent spec governs *who is allowed to act and how*; the data spec governs *what may be done with each piece of evidence*. Agents get eight properties; data objects get six questions.
 > Carry the six answers as **immutable, hashed, signed metadata** bound to the data object. Log every access.
+
+The canonical protocol, verbatim from the v24 source (Chapter 4, "Governing the Data: The Six Questions Every Data Object Must Answer," Dual-Track Architecture block):
+
+```
+[DATA_GOVERNANCE_PROTOCOL]
+Question 1: What is it? -> Enforces strict validation schema and object typing.
+Question 2: Who says so? -> Explicitly tracks provenance, signatures, and chain of custody.
+Question 3: How can it be used? -> Sets execution bounds (read, share, execute, or train-on).
+Question 4: What are the legal terms? -> Maps contract structures, data licenses, and residency rules.
+Question 5: What happens if wrong? -> Declares error semantics, liability, and mitigation triggers.
+Question 6: How is dispute resolved? -> Encodes machine-readable arbitration, escrow, or rollback paths.
+```
+
+(HIDO is this skill's working shorthand for the six-question diagnostic, carried from earlier outline versions.)
 
 **Data object name:** _______________________________________
 **Object class / schema:** _______________________________________
@@ -13,7 +27,7 @@
 
 ## 1. What is it?
 
-> Schema, type, canonical form, version.
+> Enforces strict validation schema and object typing: schema, type, canonical form, version.
 
 **Schema / type:**
 ___________________________________________________________
@@ -29,7 +43,7 @@ ___________________________________________________________
 
 ## 2. Who says so?
 
-> Provenance, issuer, signature, chain of custody.
+> Provenance, signatures, and chain of custody.
 
 **Issuer:**
 ___________________________________________________________
@@ -44,12 +58,13 @@ ___________________________________________________________
 
 ## 3. How can it be used?
 
-> Permitted operations: read, decide-on, share, train-on.
+> Execution bounds: read, share, execute, or train-on.
 
 | Operation | Permitted? | Conditions |
 |---|---|---|
 | Read | ☐ Yes ☐ No | |
 | Decide on (use as input to agent decisions) | ☐ Yes ☐ No | |
+| Execute on (trigger actions from this object) | ☐ Yes ☐ No | |
 | Share (with internal humans / agents) | ☐ Yes ☐ No | |
 | Share across firm boundary | ☐ Yes ☐ No | |
 | Train on (use to fine-tune or update models) | ☐ Yes ☐ No | |
@@ -63,7 +78,7 @@ ___________________________________________________________
 
 ## 4. What are the legal terms?
 
-> Licensing, contractual constraints, regulatory class.
+> Contract structures, data licenses, and residency rules.
 
 **License / contract reference:**
 ___________________________________________________________
@@ -81,12 +96,12 @@ ___________________________________________________________
 
 ## 5. What happens if it's wrong?
 
-> Error semantics, who notices, who fixes, who pays.
+> Error semantics, liability, and mitigation triggers: who notices, who fixes, who pays.
 
 **Failure modes:**
 ___________________________________________________________
 
-**Detection mechanism (eval / monitor / customer escalation / Silent Drift threshold):**
+**Detection mechanism (eval / monitor / customer escalation / Quiet Drift threshold):**
 ___________________________________________________________
 
 **Owner of remediation:**
@@ -100,7 +115,7 @@ ___________________________________________________________
 
 ## 6. How is a dispute resolved?
 
-> Resolution path before lawyers: arbitration, escrow, rollback.
+> Machine-readable arbitration, escrow, or rollback paths, before lawyers.
 
 **Pre-litigation resolution path:**
 ___________________________________________________________
@@ -142,4 +157,4 @@ The six answers above MUST be:
 
 ## Source Attribution
 
-The HIDO Six-Question Diagnostic is published in *The Organizational Singularity* (OS Outline v13, May 2026, Chapter 4 "Governing the Data"), authored by Salim Ismail with contributors. The Six Questions also serve as the **machine-readable cross-firm contract** in the Cross-Organizational Accountability stack (Chapter 3, E, Ecosystem Trust).
+The Six-Question data diagnostic is published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 4, "Governing the Data: The Six Questions Every Data Object Must Answer," carried as the `[DATA_GOVERNANCE_PROTOCOL]` block), authored by Salim Ismail with contributors. The Six Questions also serve as the **machine-readable cross-firm contract** in the Ecosystem Trust cross-organizational bounds (Chapter 3) and as the per-object companion to the Workflow Data Manifest (Chapter 9, Step 3; Appendix F, Q3).

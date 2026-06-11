@@ -1,10 +1,10 @@
 [metadata]
 author = "Kent Langley"
 created = "2026-05-01"
-updated = "2026-05-19"
-version = "1.3.0"
+updated = "2026-06-10"
+version = "1.4.0"
 license = "MIT"
-source_attribution = "Salim Ismail with contributors — The Organizational Singularity, OS Outline v20 (Edge Twin Data-Governance Pass), OpenExO Pro, May 2026"
+source_attribution = "Salim Ismail with contributors, The Organizational Singularity, OS Outline v24 (Restoration Merge: v22 Content + v23 Architecture), OpenExO Pro, June 2026"
 tags = [
   "exo-3.0",
   "intelligence-stack",
@@ -23,19 +23,22 @@ tags = [
   "granular-rollback",
   "human-review-queue",
   "hido",
+  "six-data-governance-questions",
+  "quiet-drift",
   "silent-drift",
   "peter-principle-ai-agents",
   "miura-ko-ladder",
   "cross-organizational-accountability",
   "permission-envelope",
   "fiduciary-wedge",
-  "continuous-kill-switch",
+  "self-disruption-probe",
+  "three-compounding-loops",
   "social-capital-crosswalk",
   "five-layer-agent-stack",
   "amazon-q-sidebar",
   "steinberger-openclaw",
   "tokens-as-cogs",
-  "semianalysis",
+  "cost-of-inference-per-workflow",
   "headless-360",
   "per-outcome-pricing",
   "idc-agent-forecast",
@@ -57,14 +60,52 @@ tags = [
   "cio-edge-twin-diagnostic",
   "appendix-f",
   "readiness-gate",
+  "readiness-gate-protocol",
   "nist-ai-rmf",
   "owasp-llm-top-10",
   "csa-ai-controls-matrix",
   "aicm",
+  "adlc",
   "standards-mapping",
   "access-not-training",
   "scoped-workload-identity",
-  "short-lived-credentials"
+  "short-lived-credentials",
+  "tokenmaxxing-test",
+  "dabbling-test",
+  "third-anchor",
+  "score-interpretation-matrix",
+  "appendix-a-diagnostics",
+  "sarbanes-oxley-moment",
+  "vendor-shortcut",
+  "autonomous-enterprise",
+  "group-drive-unit-drive",
+  "binding-problem",
+  "retention-by-resonance",
+  "agentic-fidelity-paradox",
+  "purpose-litmus-tests",
+  "coordination-tax",
+  "monotonicity",
+  "congestion",
+  "great-flattening",
+  "delayering-steelman",
+  "bridge-curriculum",
+  "dual-cost-j-curve",
+  "productivity-j-curve",
+  "phantom-jobs",
+  "cognitive-blocs",
+  "domain-collapse-engine",
+  "abundance-flywheel",
+  "world-models",
+  "gatekeeper-to-validator",
+  "electrification-precedent",
+  "agent-blueprints",
+  "agent-spec-schema",
+  "data-governance-protocol",
+  "dual-track-architecture",
+  "decision-boundary-map",
+  "light-edge-mode",
+  "portfolio-math",
+  "sovereign-stack-playbook"
 ]
 
 [defaults]

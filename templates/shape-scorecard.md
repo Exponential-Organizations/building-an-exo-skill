@@ -1,7 +1,8 @@
-# SHAPE Scorecard
+# SHAPE Scorecard *(What keeps you right and resilient)*
 
 > Score the organizational form. Five components, 1–5 each. Total 25.
 > Apply the Middle-60% absorption rule: if absorption math is not honestly modeled, cap H at ≤2/5.
+> v24 additions to this rubric: the Binding Problem check under H, the third Purpose Litmus Test and Agentic Fidelity Paradox under P, and the Sarbanes-Oxley Moment board framing under S.
 
 **Firm:** _______________________________________
 **Date:** _______________________________________
@@ -11,7 +12,7 @@
 
 ### S: Safe Autonomy (1–5): ____
 
-> Fiduciary Wedge, compliance-as-code, kill switches, audit trails, agent-to-agent oversight.
+> Fiduciary Wedge, compliance-as-code, kill switches, audit trails, agent-to-agent oversight. Board framing (v24): GOVERN/ASSURE is a revenue-protection mechanism protecting the balance sheet from autonomous operational degradation; the Sarbanes-Oxley Moment (Sonnenfeld, Yale CELI) makes the Four Pillars a fiduciary obligation (decision rights, escalation thresholds, fiduciary liability, disclosure).
 
 | Score | Anchor |
 |---|---|
@@ -26,35 +27,39 @@ Permission Envelope check (PocketOS prevention):
 ☐ Approval threshold for destructive actions
 ☐ Soft-delete window on irreversible operations
 ☐ Tested kill switch with documented recovery procedure
+☐ Backups isolated outside the primary blast radius
+
+Board governance check (v24):
+☐ Formal agentic governance framework presented at board level (decision rights, escalation thresholds, fiduciary liability, disclosure)
 
 #### Four Pillars Sub-Rubric (score each 1–5)
 
 | Pillar | Score | Anchor |
 |---|---|---|
-| Trusted Evals | ____ | Every agent runs continuously against a known test set. Catches Silent Drift before customers do. |
+| Trusted Evals | ____ | Every agent runs continuously against a known test set. Catches Quiet Drift before customers do. |
 | Searchable Logs with Correlation IDs | ____ | Every decision recoverable from the audit trail alone. |
 | Granular Rollback | ____ | Any single agent revertible without taking the Stack down. |
 | Human Review Queue | ____ | Money / legal / customer-of-record decisions routed to a named human with SLAs. |
 | **Four Pillars Maturity (minimum)** | **____** | **Do not deploy new agent class until ≥ 3.** |
 
-HIDO check (data-side governance, see `templates/hido-six-questions.md`):
-☐ HIDO Six Questions answered for every data object an agent acts on
-☐ HIDO metadata is immutable, hashed, signed
-☐ HIDO metadata travels with the data, including across firm boundary
+Six-Questions check (data-side governance, see `templates/hido-six-questions.md`):
+☐ Six Questions answered for every data object an agent acts on
+☐ Metadata is immutable, hashed, signed
+☐ Metadata travels with the data, including across firm boundary
 
 Reasoning: _______________________________________________________________
 
 ### H: Human Architecture (1–5): ____
 
-> Where human cognition is irreplaceable. Middle 60%, missing junior loop, bifurcation risk.
+> Where human cognition is irreplaceable. Four named sub-problems in v24: Middle 60%, Missing Junior Loop, Bifurcation Risk, and the Binding Problem.
 
 | Score | Anchor |
 |---|---|
-| 1 | Headcount cuts without workflow redesign; no absorption math; no apprenticeship loop. |
+| 1 | Headcount cuts without workflow redesign; no absorption math; no apprenticeship loop; retention strategy is salary-matching. |
 | 2 | Some absorption modeling; transition leader unnamed. |
 | 3 | Absorption math modeled; transition leader named; some Stack-mentored learning rotations. |
-| 4 | Funded transition; engineered junior loop; bridges visible. |
-| 5 | Honest absorption math; fully funded transition (10–15% of savings); engineered junior loop; measured caste-formation indicators; porous inner ring. |
+| 4 | Funded transition; engineered junior loop; bridges visible; retention-by-resonance partially engineered. |
+| 5 | Honest absorption math; fully funded transition (10–15% of savings); engineered junior loop; Bridge Curriculum running; measured caste-formation indicators; porous inner ring; Consequence, Legibility, and Identity explicitly designed. |
 
 Middle-60% absorption math:
 ☐ Current headcount in target functions: ___________
@@ -70,10 +75,16 @@ Missing junior loop check:
 ☐ AI-augmented mentoring program in place
 ☐ Structured exposure to judgment patterns agents can't yet handle
 
-Bifurcation / caste check:
-☐ Promotion paths from outer ring to inner ring exist
-☐ Caste-formation measured as a leading indicator
-☐ Inner ring is porous
+Bifurcation / caste check (Bridge Curriculum, Chapter 6):
+☐ Promotion paths from outer ring to inner ring exist (12 months or fewer per transition)
+☐ Porosity rate measured (target 30%+; below 20% is the caste-lock-in warning)
+☐ Caste-formation early-warning indicators at board level monthly (adoption gap, porosity rate, voluntary exit profile)
+
+Binding Problem check (v24, retention-by-resonance):
+☐ **Consequence**: high-judgment humans govern agent fleets; their decisions have engineered, expanding surface area
+☐ **Legibility**: who-decided-what is visible by design (invisible impact feels like no impact)
+☐ **Identity**: purpose specific enough to exclude; disqualifiers written into the Identity Layer
+☐ Compensation treated as hygiene: paid to parity, not relied on as the binder
 
 Reasoning: _______________________________________________________________
 
@@ -93,25 +104,29 @@ Reasoning: _______________________________________________________________
 
 ### P: Purpose Control (1–5): ____
 
-> MTP as three-layer protocol (Constraint, Decision, Identity).
+> MTP as three-layer protocol (Constraint, Decision, Identity). v24: the Identity Layer carries explicit disqualifiers; the failure mode prevented is the Agentic Fidelity Paradox ("the more precisely agents adhere to predefined procedure, the less capable they become on novel problems"); litmus tests are three.
 
 | Score | Anchor |
 |---|---|
 | 1 | MTP is a poster; no Constraint Layer; no machine-readable form. |
 | 2 | Some constraint statements documented; not machine-readable. |
-| 3 | Constraint and Decision layers documented; Identity Layer relies on legacy office culture. |
-| 4 | All three layers documented; first litmus test passes. |
-| 5 | All three layers operational; both litmus tests pass; MTP routinely refuses feature requests. |
+| 3 | Constraint and Decision layers documented; Identity Layer relies on legacy office culture; no disqualifiers. |
+| 4 | All three layers documented; first two litmus tests pass. |
+| 5 | All three layers operational; all three litmus tests pass; Identity disqualifiers explicit; MTP routinely refuses feature requests. |
 
-MTP litmus tests:
+MTP litmus tests (three in v24):
 ☐ Could an agent, given only the MTP, make a decision leadership would endorse?
 ☐ Could that agent, given only the MTP, decide what NOT to build?
+☐ Could a high-judgment human, reading only the Identity Layer, answer why they stay, what their contribution makes visible, and who the organization is not for?
+
+Agentic Fidelity Paradox check:
+☐ The MTP encodes purpose, not procedure (agents are not brittle proceduralized scripts; GOVERN catches the drift)
 
 Reasoning: _______________________________________________________________
 
 ### E: Ecosystem Trust (1–5): ____
 
-> Trust as protocol. Cryptographic identity, verifiable credentials, mechanism design.
+> Trust as protocol. Cryptographic identity, verifiable credentials, mechanism design. v24 condenses the cross-organizational requirement to three numbered bounds.
 
 | Score | Anchor |
 |---|---|
@@ -122,14 +137,14 @@ Reasoning: _______________________________________________________________
 | 5 | Mechanism-design protocols in production; verification networks operational; bloc-aware design. |
 
 Balkanization design check:
-☐ Designed for cognitive blocs (US / China / EU divergence)
+☐ Designed for cognitive blocs (US / China / EU / India divergence)
 ☐ Sovereign AI capability evaluated
 ☐ Multi-bloc partner strategy
 
-Cross-Organizational Accountability check (any cross-firm agent action):
-☐ Policy-controlled API surface for external agents (scoped credentials, rate limits, action whitelists, kill-switch authority)
-☐ HIDO metadata travels with every data object exchanged
-☐ Liability framework codesigned with counterparty in advance, agreed error budgets, mitigation paths, arbitration mechanism
+The three cross-organizational bounds (any cross-firm agent action):
+☐ 1. Policy-controlled API surface for external agents (scoped credentials, rate limits, kill-switch authority, every interaction logged)
+☐ 2. Data-object metadata travels with every object exchanged (the Six Questions as machine-readable cross-firm contract)
+☐ 3. Liability framework codesigned with counterparty in advance: agreed error budgets, mitigation paths, machine-readable arbitration mechanisms
 ☐ Legal team in the room when the integration was designed
 
 Reasoning: _______________________________________________________________
@@ -152,4 +167,4 @@ Reasoning: _______________________________________________________________
 
 ## Source Attribution
 
-SHAPE is a component of ExO 3.0, published in *The Organizational Singularity* (OS Outline v13, May 2026), authored by Salim Ismail with contributors. See `openexo-fOS/active-projects/OS_v13/shape-toolkit-v13/` for the full bound playbook and scoring template (the source for the Four Pillars sub-rubric, HIDO check, and Cross-Organizational Accountability check added in v13).
+SHAPE is a component of ExO 3.0, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 3), authored by Salim Ismail with contributors. v24 supplies the header tagline, the Binding Problem and retention-by-resonance (Consequence / Legibility / Identity), the third Purpose Litmus Test, the Agentic Fidelity Paradox (Delphi Group, 2026), the Identity Layer disqualifiers, the three cross-organizational bounds, and the Sarbanes-Oxley Moment board framing (Sonnenfeld, Yale CELI, May 2026).

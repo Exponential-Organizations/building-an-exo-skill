@@ -1,6 +1,6 @@
 # Workflow Data Manifest
 
-> Template, REWRITE Step 3 EXTRACT exit criterion (v20). One page per migration-candidate workflow. Workflow-level companion to the HIDO Six Questions per object. See `references/edge-twin-data-governance.md` and `references/rewrite-playbook.md`.
+> Template, REWRITE Step 3 EXTRACT exit criterion (*The Organizational Singularity*, OS Outline v24, Chapter 9 Step 3; required by Appendix F Q3 under the Readiness Gate Protocol). One page per migration-candidate workflow. Workflow-level companion to the Six Questions per object (`templates/hido-six-questions.md`). See `references/edge-twin-data-governance.md` and `references/rewrite-playbook.md`. Content unchanged from the v20 pass; v24 carries it intact.
 
 **Binary rule.** *If you cannot state why a workflow needs a field, the Edge Twin does not get it.*
 

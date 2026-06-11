@@ -1,6 +1,6 @@
 # Cold-Start Learning for the Edge Twin: The Four-Feed Protocol
 
-> Source: *The Organizational Singularity*, OS Outline v20, Chapter 9, REWRITE Step 5 (BUILD & PROVE). Salim Ismail with contributors, May 2026. v20 names the parallel run as **shadow mode** and specifies the four learning feeds that close the cold-start gap without forking corporate data.
+> Source: *The Organizational Singularity*, OS Outline v24, Chapter 9, REWRITE Step 5 (BUILD & PROVE). Salim Ismail with contributors, June 2026. v20 named the parallel run as **shadow mode** and specified the four learning feeds that close the cold-start gap without forking corporate data. **The protocol carries over unchanged in v24.** Two v24 anchors reinforce it: Step 5 now executes explicitly inside the protected, insulated boundary of the Edge Twin, and Appendix F Q10 elevates the success metric into the funding diagnostic ("the human-override rate must systematically fall over time").
 
 ## The Question
 
@@ -101,7 +101,7 @@ If a pillar is below 3/5, the feed it supports is unreliable, and the cold-start
 
 ## The Failure Mode
 
-Treating the parallel run as a *demo* instead of a *learning protocol*. The twin runs in parallel for 30 days, the team declares it ready, the legacy workflow is deprecated, and the override rate is never tracked again. Six months later the twin has drifted (Silent Drift, see `references/intelligence-stack.md`) and nobody noticed.
+Treating the parallel run as a *demo* instead of a *learning protocol*. The twin runs in parallel for 30 days, the team declares it ready, the legacy workflow is deprecated, and the override rate is never tracked again. Six months later the twin has drifted (Quiet Drift, see `references/intelligence-stack.md`) and nobody noticed.
 
 The defense. The four feeds run continuously, not just during the parallel run. Historical replay is the eval set. Shadow comparison is the divergence log. Human-correction capture is the override taxonomy. Synthetic edge cases are the rare-event eval suite. All four feed the LEARN layer of the Stack, which is the structural reason intelligence-dense firms compound (see `references/intelligence-stack.md`).
 

@@ -1,6 +1,6 @@
 # Edge Twin Data Governance: The CIO's First Objection, Answered
 
-> Source: *The Organizational Singularity*, OS Outline v20, Chapter 8, Edge Deployment, and Appendix F, The CIO Edge Twin Diagnostic. Salim Ismail with contributors, May 2026. v20 is the *Edge Twin Data-Governance Pass*: the first question every CIO asks, the answer the book commits to, and the operational primitives that make the answer hold.
+> Source: *The Organizational Singularity*, OS Outline v24: Chapter 8 (CEO Takeaway), Chapter 9 Step 3 (Workflow Data Manifest) and Step 5 (cold-start protocol), and Appendix F (the CIO Edge Twin Diagnostic, Q2–Q4, with the Readiness Gate Protocol). Salim Ismail with contributors, June 2026. **Structural note for v24:** the v20 prose sidebar "Does the Edge Twin fork your data?" was removed from Chapter 8; the no-fork doctrine was redistributed, not weakened. It now lives in four book locations: the Chapter 8 CEO Takeaway one-liner, Step 3's Workflow Data Manifest exit criterion, Step 5's "without forking corporate data" cold-start protocol, and Appendix F Questions 2–4. This reference remains the skill's consolidated, CIO-grade answer.
 
 ## Why This Reference Exists
 
@@ -9,12 +9,21 @@ When you propose an Edge Twin, the CIO and CISO do not ask *"can it work?"* They
 This reference is the load-bearing answer. It pairs with:
 
 - The Workflow Data Manifest (REWRITE Step 3 EXTRACT exit criterion). See `references/rewrite-playbook.md` and `templates/workflow-data-manifest-template.md`.
-- The HIDO Six Questions (per data object). See `references/intelligence-stack.md` and `templates/hido-six-questions.md`.
-- The CIO Edge Twin Diagnostic (Appendix F readiness gate). See `templates/cio-edge-twin-diagnostic.md`.
+- The Six Questions per data object (HIDO). See `references/intelligence-stack.md` and `templates/hido-six-questions.md`.
+- The CIO Edge Twin Diagnostic (Appendix F Readiness Gate Protocol). See `templates/cio-edge-twin-diagnostic.md`.
 
 ## The One-Sentence Answer
 
-**No.** The Edge Twin does not copy the enterprise data estate. It gets workflow-scoped, governed API access to the specific systems one migrated workflow needs, with read and write separated, every call logged on a correlation ID, and credentials short-lived and revocable. Operational systems remain the source of truth. If the Edge Twin and the ERP disagree, the ERP wins. The twin is the reasoning and orchestration layer, not a second system of record.
+**No.** The Edge Twin does not copy the enterprise data estate. It gets workflow-scoped, governed API access to the specific systems one migrated workflow needs, with read and write separated, every call logged on a correlation ID, and credentials short-lived and revocable. The v24 CEO Takeaway carries the directive verbatim: "Give it governed, workflow-scoped data access, not a fork of your data estate, and keep operational systems as the source of truth: if the twin and the ERP disagree, the ERP wins." The twin is the reasoning and orchestration layer, not a second system of record.
+
+## Where the Doctrine Lives in the v24 Book
+
+Cite chapter and verse when the CIO asks:
+
+1. **Chapter 8, CEO Takeaway.** The one-line no-fork and ERP-wins directive (quoted above).
+2. **Chapter 9, Step 3 (EXTRACT).** The Workflow Data Manifest: "The rule is binary. If you cannot state why a workflow needs a field, the Edge Twin does not get it." A Step 3 exit criterion.
+3. **Chapter 9, Step 5 (BUILD & PROVE).** "Four feeds close the cold-start gap without forking corporate data."
+4. **Appendix F, Q2–Q4.** Q2: "Core operational systems remain the truth. If the Edge Twin and the ERP conflict, the ERP wins." Q3: completed Workflow Data Manifest plus the six data questions per object. Q4: "access and training are different contracts."
 
 ## The Six Governance Primitives
 
@@ -42,21 +51,21 @@ The twin gets its own **scoped workload identity**. Not an employee's credential
 
 ### 5. Operational Systems Are the Source of Truth
 
-**If the Edge Twin and the ERP disagree, the ERP wins.** Every time. Without exception. The twin is the reasoning, simulation, and orchestration layer. It is not a second system of record, and it is never allowed to become one early.
+**If the Edge Twin and the ERP disagree, the ERP wins.** Every time. Without exception. The twin is the reasoning, simulation, and orchestration layer. In the Appendix F wording, it is "never a secondary system of record, and it is never allowed to become one early."
 
 This rule lives in the Edge Twin charter, signed by the CEO and the CIO before funding. Without it, the twin drifts into shadow-IT territory the moment the first reconciliation disagreement appears.
 
-### 6. Per-Object HIDO Governance
+### 6. Per-Object Governance: The Six Questions
 
-Each object the twin touches still answers the **HIDO Six Questions**: what is it, who says so, how can it be used, what are the legal terms, what happens if it is wrong, how is a dispute resolved. Carried as immutable, hashed, signed metadata bound to the object.
+Each object the twin touches still answers the **Six Questions** (the `[DATA_GOVERNANCE_PROTOCOL]` block in Chapter 4): what is it, who says so, how can it be used, what are the legal terms, what happens if it is wrong, how is a dispute resolved. Carried as immutable, hashed, signed metadata bound to the object.
 
-The Manifest governs the workflow's data surface. HIDO governs each object inside the surface. Both are required.
+The Manifest governs the workflow's data surface. The Six Questions govern each object inside the surface. Both are required.
 
 ## Access Is Not Training
 
 This is the single most common executive confusion. Access and training are different contracts.
 
-**Default posture.** The twin retrieves governed data at runtime. It learns from workflow traces, human corrections, outcomes, and synthetic edge cases. It does not learn from possession of the data estate.
+**Default posture.** The twin retrieves governed data at runtime. It learns from workflow traces, human corrections, outcomes, simulations, and synthetic edge cases. It does not learn from possession of the data estate.
 
 **Training and fine-tuning** happen only on approved, curated, de-identified datasets, under a separate vendor contract.
 
@@ -93,7 +102,7 @@ The data-governance primitives are not separate from the Four Pillars. They are 
 | Correlation-ID logging | Searchable Logs (the pillar by name) |
 | Short-lived, revocable credentials | Searchable Logs (per-action logging) + Granular Rollback (credential revocation is the rollback path) |
 | ERP-wins source of truth | Trusted Evals (twin output evaluated against operational system on every cycle) |
-| HIDO metadata per object | Underpins all four pillars; metadata travels with the data |
+| Six-Questions metadata per object | Underpins all four pillars; metadata travels with the data |
 
 If a pillar is below 3/5 for this workflow, the data primitive it backs cannot be relied on. That is the gate.
 
@@ -105,7 +114,7 @@ The data-governance primitives operationalize, rather than restate, the followin
 - **OWASP Top 10 for LLM Applications** for the failure modes (prompt injection, sensitive-information disclosure, insecure output handling, excessive agency)
 - **CSA AI Controls Matrix (July 2025)** for the 243 control objectives across 18 domains
 
-See `references/four-pillars-standards-mapping.md` for the per-control crosswalk.
+See `references/four-pillars-standards-mapping.md` for the per-control crosswalk, the v24 ADLC parallel, and the Sarbanes-Oxley Moment board framing.
 
 ## The Failure Mode
 
@@ -124,8 +133,8 @@ Before the Edge Twin is funded, the CIO confirms in writing:
 - [ ] Correlation-ID logging operational end to end
 - [ ] Scoped workload identity provisioned, short-lived, revocable
 - [ ] Operational systems remain source of truth (ERP wins ties)
-- [ ] HIDO metadata in place on every data object the workflow touches
+- [ ] Six-Questions metadata in place on every data object the workflow touches
 - [ ] Access-vs-training distinction pinned in vendor contract (retention, training rights, deletion rights, audit rights, model isolation)
-- [ ] Appendix F (CIO Edge Twin Diagnostic) scored: no red on Q5, Q6, Q7, or Q8
+- [ ] Appendix F (CIO Edge Twin Diagnostic) scored under the Readiness Gate Protocol: no Red on Q5, Q6, Q7, or Q8
 
-If any line is unsigned, the Edge Twin is not funded.
+If any line is unsigned, the Edge Twin is not funded. Under the v24 Readiness Gate Protocol, a Red on Q5–Q8 means the build is legally halted until the SHAPE controls are satisfied.
