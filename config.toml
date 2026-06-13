@@ -2,7 +2,7 @@
 author = "Kent Langley"
 created = "2026-05-01"
 updated = "2026-06-10"
-version = "1.4.0"
+version = "1.4.1"
 license = "MIT"
 source_attribution = "Salim Ismail with contributors, The Organizational Singularity, OS Outline v24 (Restoration Merge: v22 Content + v23 Architecture), OpenExO Pro, June 2026"
 tags = [
