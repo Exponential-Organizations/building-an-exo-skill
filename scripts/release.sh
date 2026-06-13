@@ -99,13 +99,46 @@ fi
 
 TAG="v${VERSION}"
 
-if ! command -v gh >/dev/null 2>&1; then
-  echo "GitHub CLI (gh) is required but not installed." >&2
+resolve_gh() {
+  local candidate
+
+  if [[ -n "${GH_BIN:-}" && -x "$GH_BIN" ]]; then
+    echo "$GH_BIN"
+    return 0
+  fi
+
+  if candidate="$(command -v gh 2>/dev/null)" && [[ -n "$candidate" ]]; then
+    echo "$candidate"
+    return 0
+  fi
+
+  for candidate in \
+    "$HOME/bin/gh" \
+    "/usr/local/bin/gh" \
+    "/usr/bin/gh" \
+    "/snap/bin/gh"; do
+    if [[ -x "$candidate" ]]; then
+      echo "$candidate"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+if ! GH="$(resolve_gh)"; then
+  cat >&2 <<'EOF'
+GitHub CLI (gh) is required but was not found.
+
+Install options:
+  - https://cli.github.com/
+  - or set GH_BIN to the full path of your gh binary
+EOF
   exit 1
 fi
 
-if ! gh auth status >/dev/null 2>&1; then
-  echo "GitHub CLI is not authenticated. Run: gh auth login" >&2
+if ! "$GH" auth status >/dev/null 2>&1; then
+  echo "GitHub CLI is not authenticated. Run: $GH auth login" >&2
   exit 1
 fi
 
@@ -119,7 +152,7 @@ run() {
   fi
 }
 
-if gh release view "$TAG" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
+if "$GH" release view "$TAG" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
   if [[ "$REPLACE" != true ]]; then
     echo "Release $TAG already exists on $GITHUB_REPO." >&2
     echo "Use --replace to delete and recreate it with dist/building-an-exo.skill." >&2
@@ -127,12 +160,12 @@ if gh release view "$TAG" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
   fi
 
   echo "Deleting existing release $TAG..."
-  run gh release delete "$TAG" --repo "$GITHUB_REPO" --yes
+  run "$GH" release delete "$TAG" --repo "$GITHUB_REPO" --yes
   run git -C "$REPO_ROOT" push origin ":refs/tags/$TAG" 2>/dev/null || true
 fi
 
 echo "Creating release $TAG with $(basename "$SKILL_FILE")..."
-run gh release create "$TAG" "$SKILL_FILE" \
+run "$GH" release create "$TAG" "$SKILL_FILE" \
   --repo "$GITHUB_REPO" \
   --target master \
   --title "$TAG" \
@@ -141,6 +174,6 @@ run gh release create "$TAG" "$SKILL_FILE" \
 if [[ "$DRY_RUN" != true ]]; then
   echo
   echo "Release published:"
-  gh release view "$TAG" --repo "$GITHUB_REPO" --web 2>/dev/null || \
+  "$GH" release view "$TAG" --repo "$GITHUB_REPO" --web 2>/dev/null || \
     echo "https://github.com/$GITHUB_REPO/releases/tag/$TAG"
 fi
