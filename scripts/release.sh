@@ -3,7 +3,7 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-Publish dist/building-an-exo.skill to GitHub Releases.
+Publish both skill archives (Claude + Codex) from dist/ to GitHub Releases.
 
 Usage:
   scripts/release.sh [options]
@@ -24,8 +24,9 @@ EOF
 }
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SKILL_FILE="$REPO_ROOT/dist/building-an-exo.skill"
-CONFIG="$REPO_ROOT/config.toml"
+CLAUDE_SKILL="$REPO_ROOT/dist/building-an-exo.skill"
+CODEX_SKILL="$REPO_ROOT/dist/building-an-exo-v25-codex.skill"
+CONFIG="$REPO_ROOT/claude/config.toml"
 GITHUB_REPO="Exponential-Organizations/building-an-exo-skill"
 
 VERSION=""
@@ -68,10 +69,12 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-if [[ ! -f "$SKILL_FILE" ]]; then
-  echo "Missing canonical skill archive: $SKILL_FILE" >&2
-  exit 1
-fi
+for f in "$CLAUDE_SKILL" "$CODEX_SKILL"; do
+  if [[ ! -f "$f" ]]; then
+    echo "Missing skill archive: $f" >&2
+    exit 1
+  fi
+done
 
 if [[ -z "$VERSION" ]]; then
   if [[ ! -f "$CONFIG" ]]; then
@@ -94,7 +97,7 @@ if [[ -n "$NOTES_FILE" ]]; then
 fi
 
 if [[ -z "$NOTES" ]]; then
-  NOTES="ExO 3.0 the Organizational Singularity Skill v${VERSION}. Installable .skill archive from dist/."
+  NOTES="ExO 3.0 the Organizational Singularity Skill v${VERSION}. Two installable .skill archives: building-an-exo.skill (Claude) and building-an-exo-v25-codex.skill (Codex)."
 fi
 
 TAG="v${VERSION}"
@@ -155,7 +158,7 @@ run() {
 if "$GH" release view "$TAG" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
   if [[ "$REPLACE" != true ]]; then
     echo "Release $TAG already exists on $GITHUB_REPO." >&2
-    echo "Use --replace to delete and recreate it with dist/building-an-exo.skill." >&2
+    echo "Use --replace to delete and recreate it with both dist/ archives." >&2
     exit 1
   fi
 
@@ -164,8 +167,8 @@ if "$GH" release view "$TAG" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
   run git -C "$REPO_ROOT" push origin ":refs/tags/$TAG" 2>/dev/null || true
 fi
 
-echo "Creating release $TAG with $(basename "$SKILL_FILE")..."
-run "$GH" release create "$TAG" "$SKILL_FILE" \
+echo "Creating release $TAG with $(basename "$CLAUDE_SKILL") + $(basename "$CODEX_SKILL")..."
+run "$GH" release create "$TAG" "$CLAUDE_SKILL" "$CODEX_SKILL" \
   --repo "$GITHUB_REPO" \
   --target master \
   --title "$TAG" \

@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "1.2",
+  "input": {
+    "type": "object",
+    "required": ["context"],
+    "properties": {
+      "context": {
+        "type": "string",
+        "description": "Firm situation: industry, headcount, current AI maturity, prior pilots, recent near-misses, leadership mandate, and the trigger that brought building-an-exo into play"
+      },
+      "tier": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5,
+        "description": "OpenExO ICP tier (1-5)"
+      },
+      "headcount": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Current full-time employee count; determines Direct Mode (≤50), Light Edge Mode (50-500), or Full Edge Mode (500+)"
+      },
+      "sector": {
+        "type": "string",
+        "enum": [
+          "information_centric",
+          "hybrid",
+          "regulated",
+          "mission_driven_government",
+          "mission_driven_nonprofit"
+        ],
+        "description": "Used for Sliding Talent Ratio defaults and immune-system framing"
+      },
+      "current_stack": {
+        "type": "object",
+        "properties": {
+          "mvis_operational": { "type": "boolean" },
+          "model_providers": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Foundation model vendors in use; ≥2 required to clear cognitive-captivity check"
+          },
+          "vendor_suite_in_play": { "type": "boolean", "description": "v24: a vendor agent suite (e.g., SAP Autonomous Enterprise) is being positioned as the transformation; triggers the Vendor Shortcut assessment" },
+          "agent_count": { "type": "integer" },
+          "specs_documented": { "type": "boolean", "description": "Whether deployed agents have Agent Specifications / Agent Blueprints" },
+          "govern_assure_status": {
+            "type": "string",
+            "enum": ["absent", "alert_only", "escalation", "kill_switch_capable"]
+          }
+        }
+      },
+      "analysis_type": {
+        "type": "string",
+        "enum": [
+          "destination_architecture",
+          "drive_assessment",
+          "shape_assessment",
+          "readiness_score",
+          "appendix_a_diagnostics",
+          "tokenmaxxing_test",
+          "vendor_shortcut_assessment",
+          "binding_problem_review",
+          "mvis_standup",
+          "edge_twin_spawn",
+          "task_decomposition",
+          "workforce_transition_review",
+          "pocketos_postmortem",
+          "mission_driven_adaptation",
+          "cio_edge_twin_diagnostic",
+          "workflow_data_manifest",
+          "cold_start_learning_plan",
+          "four_pillars_standards_mapping",
+          "board_governance_briefing",
+          "full_intake"
+        ],
+        "description": "Type of building-an-exo analysis to perform"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": ["result", "deployment_mode", "validation_status"],
+    "properties": {
+      "result": {
+        "type": "string",
+        "description": "Complete building-an-exo deliverable"
+      },
+      "destination_architecture": {
+        "type": "object",
+        "description": "Step 1 output (when produced)",
+        "properties": {
+          "mtp_protocol": {
+            "type": "object",
+            "properties": {
+              "constraint_layer": { "type": "array", "items": { "type": "string" } },
+              "decision_layer": { "type": "array", "items": { "type": "string" } },
+              "identity_layer": { "type": "string" },
+              "identity_disqualifiers": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "v24: explicit disqualifiers (who the organization is not for)"
+              },
+              "litmus_tests_passed": {
+                "type": "object",
+                "description": "v24: all three Purpose Litmus Tests",
+                "properties": {
+                  "endorsement_test": { "type": "boolean" },
+                  "refusal_test": { "type": "boolean" },
+                  "identity_layer_test": { "type": "boolean", "description": "v24: why they stay, what their contribution makes visible, who the org is not for" }
+                }
+              }
+            }
+          },
+          "five_design_conditions_status": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "condition": {
+                  "type": "string",
+                  "enum": [
+                    "ai_centric_workflow_architecture",
+                    "recursive_improvement_infrastructure",
+                    "model_sovereignty_governed_autonomy",
+                    "intelligence_density_at_every_layer",
+                    "human_flourishing_binding_constraint"
+                  ]
+                },
+                "status": { "type": "string", "enum": ["instantiated", "partial", "absent"] },
+                "notes": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "drive_score": {
+        "type": "object",
+        "properties": {
+          "decision_architecture": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "recursive_learning": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "intelligence_stack": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "value_moat": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "elastic_agency": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "raw_total": { "type": "integer", "minimum": 5, "maximum": 25 },
+          "govern_capped_total": {
+            "type": "integer",
+            "minimum": 5,
+            "maximum": 25,
+            "description": "Capped at 13 if GOVERN/ASSURE is absent"
+          }
+        }
+      },
+      "shape_score": {
+        "type": "object",
+        "properties": {
+          "safe_autonomy": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "human_architecture": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "adaptive_architecture": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "purpose_control": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "ecosystem_trust": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "total": { "type": "integer", "minimum": 5, "maximum": 25 },
+          "middle_60_absorption_modeled": { "type": "boolean" },
+          "binding_problem_assessed": {
+            "type": "boolean",
+            "description": "v24: Consequence, Legibility, and Identity engineered for high-judgment retention; compensation treated as hygiene"
+          }
+        }
+      },
+      "readiness_score": {
+        "type": "object",
+        "properties": {
+          "organizational_drag": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "ai_elevation": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "work_architecture": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "firm_boundary_design": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "decision_autonomy": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "network_structure": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "reinvention_cadence": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "tacit_knowledge_accessibility": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "total": { "type": "integer", "minimum": 8, "maximum": 80 },
+          "band": {
+            "type": "string",
+            "enum": ["ready_for_full_rewrite", "foundational_work_needed", "survival_risk"],
+            "description": "v24 Score Interpretation Matrix: 56-80 ready; 33-55 foundational (start the 90-Day Edge Twin Sprint); below 33 survival risk (stand up an MVIS backbone)"
+          },
+          "recommended_on_ramp": {
+            "type": "string",
+            "enum": ["mvis", "ninety_day_sprint", "full_rewrite"]
+          },
+          "miura_ko_level": {
+            "type": "string",
+            "enum": ["L0", "L1", "L2", "L3", "L4", "L5"],
+            "description": "Observable current state; if score and level diverge, trust the ladder"
+          }
+        }
+      },
+      "appendix_a_diagnostics": {
+        "type": "object",
+        "description": "v24: the consolidated diagnostics suite (Appendix A). Run in order: Score, Matrix, Ladder, Dabbling, Third Anchor, Tokenmaxxing.",
+        "properties": {
+          "dabbling_test": {
+            "type": "object",
+            "properties": {
+              "fifty_percent_time_check": { "type": "boolean" },
+              "operating_cadence_check": { "type": "boolean" },
+              "passed": { "type": "boolean", "description": "Both checks must pass" },
+              "agent_workflow_volume": { "type": "string", "description": "Jenkins metric: volume of workflows safely executed by autonomous agents under human command" }
+            }
+          },
+          "third_anchor_workforce_capacity": {
+            "type": "object",
+            "properties": {
+              "thriving_measure": { "type": "string" },
+              "trend": { "type": "string", "enum": ["rising", "flat", "falling"] },
+              "bridge_curriculum_funded": { "type": "boolean" }
+            }
+          },
+          "tokenmaxxing_test": {
+            "type": "object",
+            "properties": {
+              "leaderboard": { "type": "string", "enum": ["yes", "no", "dont_know"], "description": "Input-side proxies for AI productivity rewarded anywhere" },
+              "geometry": { "type": "string", "enum": ["yes", "no", "dont_know"], "description": "Agents preserving the existing org chart, approval chain, and workflow boundaries" },
+              "latency": { "type": "string", "enum": ["yes", "no", "dont_know"], "description": "Customer-signal-to-shipped-change NOT 5x faster despite faster tasks" },
+              "below_l3": { "type": "boolean", "description": "True if any check is yes" },
+              "transformation_theater": { "type": "boolean", "description": "True if three yeses or three dont_knows" }
+            }
+          }
+        }
+      },
+      "deployment_mode": {
+        "type": "string",
+        "enum": ["direct_mode", "light_edge_mode", "full_edge_mode", "mandatory_edge_mode"],
+        "description": "v24 four-row table: Direct (≤50), Light Edge (50-500), Full Edge (500+), Mandatory Edge (government/public sector)"
+      },
+      "edge_twin_spec": {
+        "type": "object",
+        "description": "Populated when deployment_mode is any edge mode",
+        "properties": {
+          "team_size": { "type": "integer", "minimum": 3, "maximum": 5 },
+          "ceo_sponsor_confirmed": { "type": "boolean" },
+          "board_mandate_in_writing": { "type": "boolean" },
+          "funding_source": {
+            "type": "string",
+            "enum": ["ceo_budget", "board_allocation", "division_budget_INVALID"]
+          },
+          "first_workflow": { "type": "string" },
+          "portfolio_discipline_framed": { "type": "boolean", "description": "v24: most twins fail; premature termination named as the enemy; knowledge capture from every kill" }
+        }
+      },
+      "vendor_shortcut_assessment": {
+        "type": "object",
+        "description": "v24: when a vendor suite is positioned as the transformation",
+        "properties": {
+          "group_drive_vs_unit_drive_delivered": { "type": "boolean" },
+          "utility_bill_vs_value_moat_delivered": { "type": "boolean" },
+          "cognitive_captivity_delivered": { "type": "boolean" },
+          "verdict": { "type": "string", "description": "Buy-for-mothership-efficiency vs. structural rewrite; the 2028 falsifiable bet stated" }
+        }
+      },
+      "task_decomposition_summary": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "role": { "type": "string" },
+            "task": { "type": "string" },
+            "category": {
+              "type": "string",
+              "enum": ["judgment", "pattern", "coordination", "creation"]
+            },
+            "agent_readiness": { "type": "integer", "minimum": 1, "maximum": 5 },
+            "disposition": {
+              "type": "string",
+              "enum": ["agent_now", "pilot_step_5", "stay_human"]
+            }
+          }
+        }
+      },
+      "agent_specifications": {
+        "type": "array",
+        "description": "Eight properties per the [AGENT_SPEC_SCHEMA] block; full documents follow the v24 Agent Blueprint format with a named human owner",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "human_owner": { "type": "string", "description": "v24 Agent Blueprint: named individual" },
+            "purpose": { "type": "string" },
+            "autonomy_tier": {
+              "type": "string",
+              "enum": ["recommend_only", "execute_within_bounds", "fully_autonomous", "recommend_options", "recommends_with_context", "split_by_action_class"]
+            },
+            "permission_envelope": { "type": "string" },
+            "memory_boundary": { "type": "string" },
+            "escalation_rules": { "type": "string" },
+            "eval_suite": { "type": "string" },
+            "telemetry_audit_trail": { "type": "string" },
+            "reusability_scope": { "type": "string" }
+          },
+          "required": [
+            "name",
+            "purpose",
+            "autonomy_tier",
+            "permission_envelope",
+            "memory_boundary",
+            "escalation_rules",
+            "eval_suite",
+            "telemetry_audit_trail",
+            "reusability_scope"
+          ]
+        }
+      },
+      "wave_1_workflow": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": ["customer_routing", "pricing", "inventory", "fraud_detection", "invoice_exception_routing", "support_triage", "order_status_exceptions", "renewal_risk_detection", "other_low_risk"]
+          },
+          "success_criteria": { "type": "string" },
+          "parallel_run_duration_days": { "type": "integer", "minimum": 30, "maximum": 90 },
+          "transition_leader_named": { "type": "boolean" }
+        }
+      },
+      "workflow_data_manifest": {
+        "type": "object",
+        "description": "Step 3 EXTRACT exit criterion. One per migration-candidate workflow. Required by Appendix F Q3.",
+        "properties": {
+          "workflow_name": { "type": "string" },
+          "data_sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source", "purpose", "access", "sensitivity", "retention", "data_owner"],
+              "properties": {
+                "source": { "type": "string", "description": "System or dataset name" },
+                "purpose": { "type": "string", "description": "Why this workflow needs this source" },
+                "access": { "type": "string", "enum": ["read", "write", "read_write"] },
+                "sensitivity": {
+                  "type": "string",
+                  "enum": ["public", "internal", "confidential", "restricted", "regulated"]
+                },
+                "retention": { "type": "string", "description": "Retention in the twin's memory" },
+                "data_owner": { "type": "string", "description": "Named human who approves access" }
+              }
+            }
+          },
+          "binary_rule_applied": {
+            "type": "boolean",
+            "description": "Confirmed: no field included without a stated workflow reason"
+          }
+        }
+      },
+      "cold_start_learning_plan": {
+        "type": "object",
+        "description": "Step 5 BUILD & PROVE protocol. Parallel run as shadow mode, inside the Edge Twin boundary.",
+        "properties": {
+          "historical_replay_set": { "type": "string", "description": "Curated workflow records" },
+          "shadow_comparison_logging": { "type": "boolean" },
+          "human_correction_capture_taxonomy": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Override reason categories (e.g., strategic_customer, policy_exception, inventory_constraint, legal_risk)"
+          },
+          "synthetic_edge_cases_scope": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Rare or dangerous scenarios generated synthetically (e.g., fraud, supply_disruption, executive_escalation)"
+          },
+          "human_override_rate_baseline": { "type": "number", "minimum": 0, "maximum": 1 },
+          "human_override_rate_target": { "type": "number", "minimum": 0, "maximum": 1 },
+          "override_rate_falling_check": { "type": "boolean", "description": "Trend confirmed falling over time; the human-override rate must systematically fall (Appendix F Q10)" }
+        }
+      },
+      "cio_edge_twin_diagnostic": {
+        "type": "object",
+        "description": "Appendix F under the v24 Readiness Gate Protocol. Any Red on Q5-Q8 (Leakage, Identity, Reversibility, Accountability) means the build must be legally halted.",
+        "properties": {
+          "q1_allowed_to_do": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q2_source_of_truth": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q3_data_needed_why": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q4_train_on_data": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q5_prevent_leakage": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q6_identity_handling": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q7_when_twin_wrong": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q8_accountability": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q9_smallest_safe_workflow": { "type": "string", "enum": ["red", "amber", "green"] },
+          "q10_measure_success": { "type": "string", "enum": ["red", "amber", "green"] },
+          "build_legally_halted": {
+            "type": "boolean",
+            "description": "True if any of Q5, Q6, Q7, Q8 is red (the SHAPE controls); v24 Readiness Gate Protocol"
+          }
+        }
+      },
+      "edge_twin_data_access": {
+        "type": "object",
+        "description": "No-data-fork architecture confirmation",
+        "properties": {
+          "data_fork_avoided": { "type": "boolean", "description": "True = workflow-scoped API access only" },
+          "read_write_separated": { "type": "boolean" },
+          "correlation_id_logging": { "type": "boolean" },
+          "credentials_short_lived_revocable": { "type": "boolean" },
+          "erp_wins_source_of_truth_signed": { "type": "boolean" },
+          "access_vs_training_pinned_in_vendor_contract": { "type": "boolean" }
+        }
+      },
+      "validation_status": {
+        "type": "object",
+        "description": "Checkpoint completion status",
+        "properties": {
+          "destination_architecture_named": { "type": "boolean" },
+          "mtp_three_layer": { "type": "boolean" },
+          "purpose_litmus_three_tests_applied": { "type": "boolean", "description": "v24: endorsement, refusal, and the new Identity Layer test" },
+          "identity_disqualifiers_explicit": { "type": "boolean", "description": "v24: the Identity Layer carries explicit disqualifiers" },
+          "drive_scored_with_govern_cap": { "type": "boolean" },
+          "shape_scored_with_middle_60_math": { "type": "boolean" },
+          "binding_problem_assessed": { "type": "boolean", "description": "v24: retention-by-resonance (Consequence, Legibility, Identity) engineered" },
+          "stack_level_identified": { "type": "boolean" },
+          "agent_specs_present": { "type": "boolean" },
+          "deployment_mode_chosen_by_headcount": { "type": "boolean" },
+          "appendix_a_suite_run_in_order": { "type": "boolean", "description": "v24: Score, Matrix, Ladder, Dabbling, Third Anchor, Tokenmaxxing" },
+          "tokenmaxxing_checked": { "type": "boolean", "description": "v24: Leaderboard / Geometry / Latency; any Yes named as below-L3 and routed to Ch6 + Step 4" },
+          "vendor_shortcut_delivered_if_applicable": { "type": "boolean", "description": "v24: group drive vs unit drive, utility bill vs value moat, cognitive captivity, 2028 bet" },
+          "sarbanes_oxley_board_framing_delivered_if_applicable": { "type": "boolean", "description": "v24: decision rights, escalation thresholds, fiduciary liability, disclosure mapped to the Four Pillars" },
+          "delayering_steelman_handled_if_applicable": { "type": "boolean", "description": "v24: the Alloy objection answered with order of operations" },
+          "two_j_curves_distinguished_if_applicable": { "type": "boolean", "description": "v24: pre-fund the firm-level dual-cost trough; cite the macro productivity trough for expectations" },
+          "wave_1_workflow_named": { "type": "boolean" },
+          "people_side_budgeted": { "type": "boolean" },
+          "rewrite_sequence_intact": { "type": "boolean" },
+          "govern_assure_at_least_alert_only": { "type": "boolean" },
+          "tier_appropriate": { "type": "boolean" },
+          "cognitive_captivity_checked": { "type": "boolean" },
+          "attribution_preserved": { "type": "boolean" },
+          "data_fork_question_answered_no_fork": { "type": "boolean", "description": "Workflow-scoped governed API access, no data estate fork" },
+          "workflow_data_manifest_produced": { "type": "boolean", "description": "One-page per-workflow manifest as Step 3 exit criterion" },
+          "cold_start_learning_protocol_named": { "type": "boolean", "description": "Shadow mode + four learning feeds defined; falling override rate is the metric" },
+          "four_pillars_standards_mapped": { "type": "boolean", "description": "NIST AI RMF / OWASP LLM Top 10 / CSA AICM / ADLC cited where applicable" },
+          "cio_diagnostic_completed": { "type": "boolean", "description": "Appendix F ten questions scored under the Readiness Gate Protocol; any red on Q5-Q8 legally halts the build" },
+          "access_vs_training_pinned": { "type": "boolean", "description": "Retention, training rights, deletion rights, audit rights, model isolation pinned with vendor" },
+          "no_third_autonomy_ladder": { "type": "boolean", "description": "Autonomy Tier + Decision Handover Waves retained; no competing maturity ladder introduced" },
+          "removed_facts_check_passed": { "type": "boolean", "description": "v24: no 73x Cognition Labs figure, no SemiAnalysis exact dollar figures, no per-letter Ch3 source attributions in output" }
+        }
+      }
+    }
+  }
+}

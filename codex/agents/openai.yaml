@@ -1,0 +1,7 @@
+interface:
+  display_name: "Building an ExO v25 Codex"
+  short_description: "Redesign firms with ExO 3.0"
+  default_prompt: "Use $building-an-exo-v25-codex to assess an AI-native operating-model redesign and recommend the first REWRITE wave."
+
+policy:
+  allow_implicit_invocation: true
