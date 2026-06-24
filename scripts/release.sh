@@ -25,7 +25,7 @@ EOF
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CLAUDE_SKILL="$REPO_ROOT/dist/building-an-exo.skill"
-CODEX_SKILL="$REPO_ROOT/dist/building-an-exo-v25-codex.skill"
+CODEX_SKILL="$REPO_ROOT/dist/building-an-exo-codex.skill"
 CONFIG="$REPO_ROOT/claude/config.toml"
 GITHUB_REPO="Exponential-Organizations/building-an-exo-skill"
 
@@ -97,7 +97,7 @@ if [[ -n "$NOTES_FILE" ]]; then
 fi
 
 if [[ -z "$NOTES" ]]; then
-  NOTES="ExO 3.0 the Organizational Singularity Skill v${VERSION}. Two installable .skill archives: building-an-exo.skill (Claude) and building-an-exo-v25-codex.skill (Codex)."
+  NOTES="ExO 3.0 the Organizational Singularity Skill v${VERSION}. Two installable .skill archives: building-an-exo.skill (Claude) and building-an-exo-codex.skill (Codex)."
 fi
 
 TAG="v${VERSION}"
