@@ -1,6 +1,6 @@
 # Cold-Start Learning for the Edge Twin: The Four-Feed Protocol
 
-> Source: *The Organizational Singularity*, OS Outline v24, Chapter 9, REWRITE Step 5 (BUILD & PROVE). Salim Ismail with contributors, June 2026. v20 named the parallel run as **shadow mode** and specified the four learning feeds that close the cold-start gap without forking corporate data. **The protocol carries over unchanged in v24.** Two v24 anchors reinforce it: Step 5 now executes explicitly inside the protected, insulated boundary of the Edge Twin, and Appendix F Q10 elevates the success metric into the funding diagnostic ("the human-override rate must systematically fall over time").
+> Source: *The Organizational Singularity*, OS Outline v25, Chapter 10, REWRITE Step 5 (BUILD & PROVE). Salim Ismail with contributors, June 2026. **v25 renumber note:** REWRITE was Chapter 9 in v24; v25 inserts a new Chapter 8 (`references/data-plane-inversion.md`), so REWRITE Step 5 is now Chapter 10. v20 named the parallel run as **shadow mode** and specified the four learning feeds that close the cold-start gap without forking corporate data. **The protocol carries over unchanged.** Two anchors reinforce it: Step 5 executes explicitly inside the protected, insulated boundary of the Edge Twin, and Appendix F Q10 elevates the success metric into the funding diagnostic ("the human-override rate must systematically fall over time").
 
 ## The Question
 

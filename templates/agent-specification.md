@@ -181,4 +181,4 @@ ___________________________________________________________
 
 ## Source Attribution
 
-The eight-property Agent Specification is the contract layer of the Intelligence Stack, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 4 `[AGENT_SPEC_SCHEMA]` and Appendix C Agent Blueprints), authored by Salim Ismail with contributors. The Reusability Scope property is highlighted from McKinsey's April 2026 enterprise diagnostic.
+The eight-property Agent Specification is the contract layer of the Intelligence Stack, published in *The Organizational Singularity* (OS Outline v25, June 2026, Chapter 4 `[AGENT_SPEC_SCHEMA]` and Appendix C Agent Blueprints), authored by Salim Ismail with contributors. The Reusability Scope property is highlighted from McKinsey's April 2026 enterprise diagnostic.

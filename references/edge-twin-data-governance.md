@@ -1,6 +1,6 @@
 # Edge Twin Data Governance: The CIO's First Objection, Answered
 
-> Source: *The Organizational Singularity*, OS Outline v24: Chapter 8 (CEO Takeaway), Chapter 9 Step 3 (Workflow Data Manifest) and Step 5 (cold-start protocol), and Appendix F (the CIO Edge Twin Diagnostic, Q2–Q4, with the Readiness Gate Protocol). Salim Ismail with contributors, June 2026. **Structural note for v24:** the v20 prose sidebar "Does the Edge Twin fork your data?" was removed from Chapter 8; the no-fork doctrine was redistributed, not weakened. It now lives in four book locations: the Chapter 8 CEO Takeaway one-liner, Step 3's Workflow Data Manifest exit criterion, Step 5's "without forking corporate data" cold-start protocol, and Appendix F Questions 2–4. This reference remains the skill's consolidated, CIO-grade answer.
+> Source: *The Organizational Singularity*, OS Outline v25: Chapter 9 (CEO Takeaway), Chapter 10 Step 3 (Workflow Data Manifest) and Step 5 (cold-start protocol), and Appendix F (the CIO Edge Twin Diagnostic, Q2–Q4, with the Readiness Gate Protocol). Salim Ismail with contributors, June 2026. **v25 renumber note:** v24 carried this material under Chapter 8 (Edge) and Chapter 9 (REWRITE); v25 inserts a new Chapter 8, "What To Do With Your Data," so Edge is now Chapter 9 and REWRITE is Chapter 10. The v20 prose sidebar "Does the Edge Twin fork your data?" was removed in v24; the no-fork doctrine was redistributed, not weakened. It now lives in four book locations: the Chapter 9 CEO Takeaway one-liner, REWRITE Step 3's Workflow Data Manifest exit criterion, Step 5's "without forking corporate data" cold-start protocol, and Appendix F Questions 2–4. **Complementary objection:** this reference answers the CIO's *fork* objection (does the twin copy our estate?). The new Chapter 8 answers the architect's *inversion* objection (should our data stay locked inside the application that wrote it?). They are two halves of the same data-governance posture; see `references/data-plane-inversion.md`. This reference remains the skill's consolidated, CIO-grade answer.
 
 ## Why This Reference Exists
 
@@ -20,9 +20,9 @@ This reference is the load-bearing answer. It pairs with:
 
 Cite chapter and verse when the CIO asks:
 
-1. **Chapter 8, CEO Takeaway.** The one-line no-fork and ERP-wins directive (quoted above).
-2. **Chapter 9, Step 3 (EXTRACT).** The Workflow Data Manifest: "The rule is binary. If you cannot state why a workflow needs a field, the Edge Twin does not get it." A Step 3 exit criterion.
-3. **Chapter 9, Step 5 (BUILD & PROVE).** "Four feeds close the cold-start gap without forking corporate data."
+1. **Chapter 9, CEO Takeaway.** The one-line no-fork and ERP-wins directive (quoted above).
+2. **Chapter 10, Step 3 (EXTRACT).** The Workflow Data Manifest: "The rule is binary. If you cannot state why a workflow needs a field, the Edge Twin does not get it." A Step 3 exit criterion.
+3. **Chapter 10, Step 5 (BUILD & PROVE).** "Four feeds close the cold-start gap without forking corporate data."
 4. **Appendix F, Q2–Q4.** Q2: "Core operational systems remain the truth. If the Edge Twin and the ERP conflict, the ERP wins." Q3: completed Workflow Data Manifest plus the six data questions per object. Q4: "access and training are different contracts."
 
 ## The Six Governance Primitives

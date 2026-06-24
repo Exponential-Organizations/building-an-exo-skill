@@ -10,7 +10,7 @@
 
 ## How to Use (v24 workshop protocol)
 
-- *Before the workshop:* complete the Intelligence Audit, distribute the Readiness Score and Five Design Conditions, pre-read Chapters 1–2, the ExO 3.0 overview, and Chapter 8.
+- *Before the workshop:* complete the Intelligence Audit, distribute the Readiness Score and Five Design Conditions, pre-read Chapters 1–2, the ExO 3.0 overview, the new Chapter 8 ("What To Do With Your Data"), and Chapter 9 (Edge Deployment).
 - *During:* work A → E sequentially. Don't let Section A constrain Section B. The whole point of backcasting is that what's "realistic today" must never determine the *direction* of change, only its *pace*.
 - *After:* the Destination Architecture document is reviewed, revised, signed by the CEO. It becomes the navigation anchor for Steps 2–6. Revisit quarterly.
 
@@ -172,4 +172,4 @@ Date: ____________
 
 ## Source Attribution
 
-The Backcasting Canvas is the Step 1 mechanism in the REWRITE Playbook, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 9 and Appendix B), authored by Salim Ismail with contributors. v24 names the five canvas sections (Current System Anchors / The 2031 Horizon State / Variance Mapping / No-Regret Architecture Moves / Signposts and Trigger Conditions) and adds the monotonic-loop identification, the Readiness Score plus Miura-Ko calculation, the Six-Questions data spine, and the Bridge-Curriculum-before-announcement move.
+The Backcasting Canvas is the Step 1 mechanism in the REWRITE Playbook, published in *The Organizational Singularity* (OS Outline v25, June 2026, Chapter 10 and Appendix B; REWRITE was Chapter 9 in v24 before a new Chapter 8 was inserted), authored by Salim Ismail with contributors. v24 names the five canvas sections (Current System Anchors / The 2031 Horizon State / Variance Mapping / No-Regret Architecture Moves / Signposts and Trigger Conditions) and adds the monotonic-loop identification, the Readiness Score plus Miura-Ko calculation, the Six-Questions data spine, and the Bridge-Curriculum-before-announcement move.

@@ -85,4 +85,4 @@
 
 ## Source Attribution
 
-The Task Decomposition Matrix is the central diagnostic in REWRITE Step 4 (Diagnose & Strip), published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 9), authored by Salim Ismail with contributors. The matrix itself is unchanged from earlier outline versions; the Ju monotonicity context and the Tokenmaxxing fix pointer are v24 additions.
+The Task Decomposition Matrix is the central diagnostic in REWRITE Step 4 (Diagnose & Strip), published in *The Organizational Singularity* (OS Outline v25, June 2026, Chapter 10; REWRITE was Chapter 9 in v24 before a new Chapter 8 was inserted), authored by Salim Ismail with contributors. The matrix itself is unchanged from earlier outline versions; the Ju monotonicity context and the Tokenmaxxing fix pointer are v24 additions.

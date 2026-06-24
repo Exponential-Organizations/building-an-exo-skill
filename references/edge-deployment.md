@@ -1,6 +1,6 @@
 # Edge Deployment: Why Transformation Can't Happen in the Core
 
-> Source: *The Organizational Singularity*, OS Outline v24, Chapter 8, The Edge Deployment Model, and Chapter 10, Mission-Driven Organizations. Salim Ismail with contributors, June 2026. **v24 restructures Chapter 8:** the chapter now opens with the epigraph and a DRIVE/SHAPE anchor corrected to the canonical six-layer Stack (PURPOSE → SENSE → INTERPRET → DECIDE → ORCHESTRATE/ACT → LEARN); the "five build steps" numbered list and the prose "Does the Edge Twin fork your data?" sidebar are **removed**, with the no-fork doctrine redistributed to the Chapter 8 CEO Takeaway, REWRITE Step 3 (Workflow Data Manifest), Step 5 (cold-start), and Appendix F Q2–Q4; the new **Vendor Shortcut** sidebar answers "can you buy the Autonomous Enterprise?"; the **Portfolio Math** section prices Edge Twin failure rates against fifty years of venture data; and the **Block reorganization case study is canonically housed here** (Chapter 6 only points to it). The Peter Principle for AI Agents is promoted to a full callout. Appendix E condenses to four numbered failure modes. See `references/edge-twin-data-governance.md` for the consolidated data-governance answer.
+> Source: *The Organizational Singularity*, OS Outline v25, Chapter 9, The Edge Deployment Model, and Chapter 11, Mission-Driven Organizations. Salim Ismail with contributors, June 2026. **v25 renumber note:** v24 carried this material as Chapter 8 (Edge) and Chapter 10 (Mission-Driven); v25 inserts a new Chapter 8, "What To Do With Your Data" (see `references/data-plane-inversion.md`), and shifts the former Chapters 8–13 to 9–14. Edge Deployment is now Chapter 9; Mission-Driven is now Chapter 11. **v24 had restructured this chapter:** it opens with the epigraph and a DRIVE/SHAPE anchor corrected to the canonical six-layer Stack (PURPOSE → SENSE → INTERPRET → DECIDE → ORCHESTRATE/ACT → LEARN); the "five build steps" numbered list and the prose "Does the Edge Twin fork your data?" sidebar are **removed**, with the no-fork doctrine redistributed to the Chapter 9 CEO Takeaway, REWRITE Step 3 (Workflow Data Manifest), Step 5 (cold-start), and Appendix F Q2–Q4; the **Vendor Shortcut** sidebar answers "can you buy the Autonomous Enterprise?"; the **Portfolio Math** section prices Edge Twin failure rates against fifty years of venture data; and the **Block reorganization case study is canonically housed here** (Chapter 6 only points to it). The Peter Principle for AI Agents is a full callout. Appendix E condenses to four numbered failure modes. See `references/edge-twin-data-governance.md` for the consolidated data-governance answer.
 
 *Build at the Edge. Don't transform the core, outcompete it.*
 
@@ -32,7 +32,17 @@ Why not simply write a check to a vendor and buy the autonomous enterprise? Thre
 
 The book's directive: "Buy the vendor suite if it makes your legacy mothership cheaper to operate. Do not confuse it with the structural rewrite of your operating model." And the falsifiable close: by 2028, compare the firms that activated vendor assistants in the core against the firms that ran insulated Edge Twins. *"We are betting on the edge; legacy suites are betting you will never change the org chart. One of us is wrong."*
 
-SAP is simultaneously the validation and the dispute: validation of the destination (the validator thesis, the finance-close-first canon in Appendix C), dispute of the route (suite in the core vs. insulated Edge Twin).
+SAP is simultaneously the validation and the dispute: validation of the destination (the validator thesis, the finance-close-first canon in Appendix C), dispute of the route (suite in the core vs. insulated Edge Twin). The data-architecture version of the same dispute, "we already opened the data layer, no rebuild required," is answered in full in the new Chapter 8 (`references/data-plane-inversion.md`): the fight is not whether data decouples but who sits at the center.
+
+### Cognitive Captivity Goes Deeper: Log Lock-In (new in v25)
+
+The three lock-in layers most leaders can name are model lock-in, API lock-in, and suite lock-in. v25 names a fourth, and it sits beneath all of them. When one vendor supplies your systems of record, your orchestrators, and your governance plane, your autonomy ceiling is bound to their roadmap. That is the captivity everyone sees. The deeper layer is the **log**: the durable, append-only history of every input, model output, tool call, and result your agents produced.
+
+Models can be swapped. APIs can be wrapped. Tools can be adapted. The log cannot, because the log *is* the agent. You can export a transcript and still lose the agent, because the agent is the path-dependent history that produced it, not its final output. An agent can be resumed from its log alone; the runtime, the model, and the tools are merely interpreters over it.[^logagent] So the deepest lock-in is not model or API lock-in. It is **log lock-in**, and the rule is short: *whoever owns the log owns the agent.*
+
+The operational instruction follows directly. Own your orchestration logic and fine-tuning data (Chapter 3), and own your agent logs too. If the durable record of how your agents reasoned lives only on a provider's infrastructure, under their retention policy, queryable only by their systems, then they own your agents no matter which model you point them at. Know where the log lives, and confirm you can replay it, fork it, export it, and migrate it. The log is also the substrate beneath the decision trace and the context graph the new Chapter 8 builds on; see `references/data-plane-inversion.md`.
+
+[^logagent]: Ishaan Sehgal, *"The Log Is the Agent,"* Omnara, 2026. Argues that an AI agent *is* its log, the append-only history of every input, model output, tool call, and result, because the agent can be resumed from the log alone; the runtime, model, and tools are merely interpreters over it. The strategic claim adapted here: the deepest lock-in is not model or API lock-in but *log* lock-in, and whoever owns the durable record of how your agents reasoned owns the agents. A vendor essay (Omnara managed-agent platform); the agent-engineering specifics (leases, idempotent loops, failover) are out of scope, the ownership argument is what is cited.
 
 ## The Solution: Build an Edge Venture (the Edge Twin)
 
@@ -50,9 +60,9 @@ That recovery loop **is the actual learning mechanism** for any real-world AI de
 
 ### Where the No-Fork Doctrine Lives Now (v24 restructuring note)
 
-v20 carried a Chapter 8 prose sidebar, "Does the Edge Twin fork your data?" v24 removed the sidebar and redistributed the doctrine; nothing was weakened. The doctrine now lives in four places:
+v20 carried a prose sidebar, "Does the Edge Twin fork your data?" v24 removed the sidebar and redistributed the doctrine; nothing was weakened. The doctrine now lives in four places (chapter numbers updated for the v25 renumber):
 
-1. **Chapter 8 CEO Takeaway**, verbatim: "Give it governed, workflow-scoped data access, not a fork of your data estate, and keep operational systems as the source of truth: if the twin and the ERP disagree, the ERP wins."
+1. **Chapter 9 CEO Takeaway**, verbatim: "Give it governed, workflow-scoped data access, not a fork of your data estate, and keep operational systems as the source of truth: if the twin and the ERP disagree, the ERP wins."
 2. **REWRITE Step 3 (EXTRACT)**, the Workflow Data Manifest as an exit criterion. The binary rule: if you cannot state why a workflow needs a field, the Edge Twin does not get it.
 3. **REWRITE Step 5 (BUILD & PROVE)**, the cold-start protocol closes the learning gap "without forking corporate data."
 4. **Appendix F, Q2–Q4** of the CIO Edge Twin Diagnostic (source of truth, data needed and why, access vs. training).
@@ -95,7 +105,7 @@ The framework substitutes legacy management hierarchies with an integrated, cont
 
 **The Critical Architectural Friction.** Block's reorganization is a stark illustration of deploying a high-tempo intelligence drivetrain (DRIVE) without explicit engineering of the organizational chassis (SHAPE). The framework completely lacks formalized GOVERN/ASSURE controls, Fiduciary Wedge ledger mapping, compliance-as-code, and runtime kill switches, inside highly regulated financial services and global payment systems. The Block model stands as a vital live experiment: it validates the extreme velocity gains of a flattened intelligence architecture, while highlighting that without SHAPE governance, a high-velocity drivetrain risks catastrophic operational drift.
 
-(Chapter 6 condenses its Block treatment to one paragraph and points here. Cite this case from Chapter 8, not Chapter 6.)
+(Chapter 6 condenses its Block treatment to one paragraph and points here. Cite this case from Chapter 9, not Chapter 6.)
 
 ## Who Needs This and Where to Start (v24 deployment-mode table)
 
@@ -116,7 +126,7 @@ The framework substitutes legacy management hierarchies with an integrated, cont
 
 ## Failure Modes and Defenses
 
-Chapter 8 names three primary failures: the immune system kills the venture (defense: structural insulation, CEO sponsorship), costs spiral before proof (defense: ruthless sequencing, one workflow at a time), CEO sponsorship lapses (defense: speed to undeniable results, board visibility).
+Chapter 9 names three primary failures: the immune system kills the venture (defense: structural insulation, CEO sponsorship), costs spiral before proof (defense: ruthless sequencing, one workflow at a time), CEO sponsorship lapses (defense: speed to undeniable results, board visibility).
 
 **Appendix E (v24) condenses the full catalogue to four numbered failure modes**, each with a one-line defense:
 
@@ -133,7 +143,7 @@ Don't transform the core. Outcompete it. Spawn a 3–5 person Edge Twin reportin
 
 ## Mission-Driven Adaptation (Government, Non-Profits, Public Sector)
 
-Mission-driven organizations face the same AI-native transition as companies, but with stronger public obligations, slower procurement, and legal immune systems. Chapter 10 is carried over intact in v24.
+Mission-driven organizations face the same AI-native transition as companies, but with stronger public obligations, slower procurement, and legal immune systems. This is Chapter 11 in v25 (Chapter 10 in v24-era numbering), carried over intact.
 
 ### Five Structural Differences from Private-Sector Transformation
 
@@ -166,6 +176,6 @@ A recent large-scale US government workforce reduction cut 271,000 federal posit
 
 Sovereign AI capability, owning the inference, the orchestration logic, and the fine-tuning data, becomes a national security imperative for any government deploying agents at scale. Cognitive captivity at the firm level is bad. At the nation level, it is catastrophic.
 
-The UAE is the lead case and the cleanest existence proof that a national government can run REWRITE at the country level. The transferable architecture is the *sequence*, not the institutional setup, captured in the `[SOVEREIGN_STACK_PLAYBOOK]` block (Chapter 10): (1) executive Cabinet ownership with budget override authority, (2) model sovereignty posture chosen consciously, (3) a mandatory citizen-facing forcing function shipped within 12 months, (4) procurement reform around agent-native specs, (5) the national control plane (sovereign inference fallback, metadata audit logs, kill switches, model-audit requirements).
+The UAE is the lead case and the cleanest existence proof that a national government can run REWRITE at the country level. The transferable architecture is the *sequence*, not the institutional setup, captured in the `[SOVEREIGN_STACK_PLAYBOOK]` block (Chapter 11): (1) executive Cabinet ownership with budget override authority, (2) model sovereignty posture chosen consciously, (3) a mandatory citizen-facing forcing function shipped within 12 months, (4) procurement reform around agent-native specs, (5) the national control plane (sovereign inference fallback, metadata audit logs, kill switches, model-audit requirements).
 
 The architecture is the same as the private-sector Edge Twin model. Build at the edge. Prove. Migrate. The difference is the political theatre and the procurement timeline. Both are solvable with sponsored mandate from the executive layer.

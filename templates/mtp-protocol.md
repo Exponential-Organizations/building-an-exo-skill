@@ -142,4 +142,4 @@ Run it with a real reader, not the authoring team:
 
 ## Source Attribution
 
-The three-layer MTP-as-protocol construct is from ExO 3.0, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 3, SHAPE Component P), authored by Salim Ismail with contributors. v24 adds the explicit Identity Layer disqualifiers, the third Purpose Litmus Test, and the Agentic Fidelity Paradox framing (Delphi Group, 2026). The original MTP construct is from *Exponential Organizations* (Ismail, Malone, van Geest, 2014).
+The three-layer MTP-as-protocol construct is from ExO 3.0, published in *The Organizational Singularity* (OS Outline v25, June 2026, Chapter 3, SHAPE Component P), authored by Salim Ismail with contributors. v24 adds the explicit Identity Layer disqualifiers, the third Purpose Litmus Test, and the Agentic Fidelity Paradox framing (Delphi Group, 2026). The original MTP construct is from *Exponential Organizations* (Ismail, Malone, van Geest, 2014).

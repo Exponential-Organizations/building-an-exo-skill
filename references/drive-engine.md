@@ -1,6 +1,6 @@
 # DRIVE: The Intelligence Engine *(What makes you fast and smart)*
 
-> Source: *The Organizational Singularity*, OS Outline v24, Chapter 3 (DRIVE) and Chapter 4 (Intelligence Stack). Salim Ismail with contributors, June 2026. The v13 DRIVE scoring template added a **Four Pillars sub-rubric** under I and a **Six-Questions (HIDO) checklist** for any agent acting on customer-of-record data. v15 added the 5-Layer Agent Stack Crosswalk note inside I. v20 added the Four Pillars standards-mapping footnote. **v24** gives DRIVE its header tagline *(What makes you fast and smart)*, removes the per-letter source attribution lines (lineage lives in the Chapter 2 table and Appendix D), renames "Decision Boundary in practice" to **Decision Boundary Map**, renumbers the five Value Moat sources, removes the 73× Cognition Labs figure, restyles the talent-ratio table ("Hybrid Operations" / "Regulated Environments"), and adds the **Tokenmaxxing Test** (Appendix A) as a DRIVE-side pre-diagnostic plus the **Ju Coordination Tax** evidence for Decision Architecture scoring. The DRIVE rubric itself is unchanged.
+> Source: *The Organizational Singularity*, OS Outline v25, Chapter 3 (DRIVE) and Chapter 4 (Intelligence Stack). Salim Ismail with contributors, June 2026. The v13 DRIVE scoring template added a **Four Pillars sub-rubric** under I and a **Six-Questions (HIDO) checklist** for any agent acting on customer-of-record data. v15 added the 5-Layer Agent Stack Crosswalk note inside I. v20 added the Four Pillars standards-mapping footnote. **v24** gives DRIVE its header tagline *(What makes you fast and smart)*, removes the per-letter source attribution lines (lineage lives in the Chapter 2 table and Appendix D), renames "Decision Boundary in practice" to **Decision Boundary Map**, renumbers the five Value Moat sources, removes the 73× Cognition Labs figure, restyles the talent-ratio table ("Hybrid Operations" / "Regulated Environments"), and adds the **Tokenmaxxing Test** (Appendix A) as a DRIVE-side pre-diagnostic plus the **Ju Coordination Tax** evidence for Decision Architecture scoring. **v25 renumber note:** Chapters 3 and 4 are unchanged, but the Vendor Shortcut, the Block case, and the Klarna receipt that this file points to now live in Chapter 9 (formerly Chapter 8), because v25 inserted a new Chapter 8, "What To Do With Your Data." The DRIVE rubric itself is unchanged.
 
 DRIVE is the intelligence engine of ExO 3.0, the drivetrain in the v24 automotive analogy. Five components, each scored 1–5, total of 25.
 
@@ -66,7 +66,7 @@ Where defensible advantage comes from when every firm has access to the exact sa
 
 1. **Proprietary Data.** The Stack systematically learns things competitors cannot because it trains on your internal workflow traces.
 2. **Network Effects.** More ecosystem participants generate more specialized, compound intelligence.
-3. **Intelligence Density.** Doing vastly more with fewer humans. v24's receipt is deliberately general: "Cognition Labs scaling massive ARR with minimal headcount." (The earlier 73× figure was removed from the book; do not cite it.) Klarna's customer agent replaced 700 full-time support workers for a $40M annualized margin improvement on a roughly $2M deployment (canonical home: Chapter 8).
+3. **Intelligence Density.** Doing vastly more with fewer humans. v24's receipt is deliberately general: "Cognition Labs scaling massive ARR with minimal headcount." (The earlier 73× figure was removed from the book; do not cite it.) Klarna's customer agent replaced 700 full-time support workers for a $40M annualized margin improvement on a roughly $2M deployment (canonical home: Chapter 9).
 4. **Reconfiguration Speed.** Moving through successive transient advantages faster than competitors can react.
 5. **Curatorial Judgment.** When execution cost approaches zero, taste and editing become the ultimate moats *(Ann Miura-Ko, April 2026)*.
 
@@ -88,7 +88,7 @@ If your Stack runs entirely on a single provider's foundation models and infrast
 
 **Mitigation:** Maintain inference capability across at least two model families. Own your orchestration logic and fine-tuning data.
 
-**The vendor-suite corollary (v24, Chapter 8 Vendor Shortcut).** A rented agent catalog is not a Value Moat. "If your 200 corporate agents come from the identical vendor catalog as your direct competitor's 200 agents, they do not constitute a Value Moat. They are simply a software utility bill." The sustainable moat lives in proprietary decision telemetry and a custom LEARN layer compounding on your specific operational history. See `edge-deployment.md` for the full Vendor Shortcut sidebar.
+**The vendor-suite corollary (Chapter 9 Vendor Shortcut, v24-era Chapter 8).** A rented agent catalog is not a Value Moat. "If your 200 corporate agents come from the identical vendor catalog as your direct competitor's 200 agents, they do not constitute a Value Moat. They are simply a software utility bill." The sustainable moat lives in proprietary decision telemetry and a custom LEARN layer compounding on your specific operational history. See `edge-deployment.md` for the full Vendor Shortcut sidebar.
 
 **Scoring anchor:**
 - 1, Pure inertia moat; single model vendor; no proprietary data, network effects, or curatorial assets.
@@ -136,7 +136,7 @@ GOVERN/ASSURE progression:
 
 ### The Block Warning: DRIVE-Without-SHAPE at Corporate Scale
 
-On March 31, 2026, Block launched *"From Hierarchy to Intelligence,"* downsizing 4,000 employees (~40% of corporate mass) within a single quarter and replacing permanent middle-management routing with three roles: Individual Contributors, Directly Responsible Individuals (DRIs), and Player-Coaches. **In v24 the canonical home of the full case study is Chapter 8** (see `edge-deployment.md`).
+On March 31, 2026, Block launched *"From Hierarchy to Intelligence,"* downsizing 4,000 employees (~40% of corporate mass) within a single quarter and replacing permanent middle-management routing with three roles: Individual Contributors, Directly Responsible Individuals (DRIs), and Player-Coaches. **The canonical home of the full case study is Chapter 9** (v24-era Chapter 8; see `edge-deployment.md`).
 
 Block is the cleanest live test of the Coasean-collapse thesis at corporate scale, **and the canonical DRIVE-without-SHAPE warning**: the framework completely lacks formalized GOVERN/ASSURE controls, Fiduciary Wedge ledger mapping, compliance-as-code, and runtime kill switches. Operating within highly regulated financial services and global payment systems, this is not a minor oversight.
 

@@ -167,4 +167,4 @@ Reasoning: _______________________________________________________________
 
 ## Source Attribution
 
-SHAPE is a component of ExO 3.0, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 3), authored by Salim Ismail with contributors. v24 supplies the header tagline, the Binding Problem and retention-by-resonance (Consequence / Legibility / Identity), the third Purpose Litmus Test, the Agentic Fidelity Paradox (Delphi Group, 2026), the Identity Layer disqualifiers, the three cross-organizational bounds, and the Sarbanes-Oxley Moment board framing (Sonnenfeld, Yale CELI, May 2026).
+SHAPE is a component of ExO 3.0, published in *The Organizational Singularity* (OS Outline v25, June 2026, Chapter 3), authored by Salim Ismail with contributors. v24 supplies the header tagline, the Binding Problem and retention-by-resonance (Consequence / Legibility / Identity), the third Purpose Litmus Test, the Agentic Fidelity Paradox (Delphi Group, 2026), the Identity Layer disqualifiers, the three cross-organizational bounds, and the Sarbanes-Oxley Moment board framing (Sonnenfeld, Yale CELI, May 2026).

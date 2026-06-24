@@ -80,7 +80,7 @@ Reasoning: _______________________________________________________________
 
 ### V: Value Moat (1–5): ____
 
-> Five sources: proprietary data, network effects, intelligence density, reconfiguration speed, curatorial judgment. Inertia moats are wasting assets. A rented vendor agent catalog is a software utility bill, not a moat (the Vendor Shortcut, Chapter 8).
+> Five sources: proprietary data, network effects, intelligence density, reconfiguration speed, curatorial judgment. Inertia moats are wasting assets. A rented vendor agent catalog is a software utility bill, not a moat (the Vendor Shortcut, Chapter 9).
 
 | Score | Anchor |
 |---|---|
@@ -155,4 +155,4 @@ Based on the score:
 
 ## Source Attribution
 
-DRIVE is a component of ExO 3.0, published in *The Organizational Singularity* (OS Outline v24, June 2026, Chapter 3), authored by Salim Ismail with contributors. v24 supplies the header tagline, the Decision Boundary Map rename, the restyled talent-ratio table, the Tokenmaxxing Test (Appendix A), and the Ju Coordination Tax evidence (Chapters 2 and 6).
+DRIVE is a component of ExO 3.0, published in *The Organizational Singularity* (OS Outline v25, June 2026, Chapter 3), authored by Salim Ismail with contributors. v24 supplies the header tagline, the Decision Boundary Map rename, the restyled talent-ratio table, the Tokenmaxxing Test (Appendix A), and the Ju Coordination Tax evidence (Chapters 2 and 6).

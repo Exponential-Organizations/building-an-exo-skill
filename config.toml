@@ -1,10 +1,10 @@
 [metadata]
 author = "Kent Langley"
 created = "2026-05-01"
-updated = "2026-06-10"
-version = "1.4.1"
+updated = "2026-06-22"
+version = "1.5.0"
 license = "MIT"
-source_attribution = "Salim Ismail with contributors, The Organizational Singularity, OS Outline v24 (Restoration Merge: v22 Content + v23 Architecture), OpenExO Pro, June 2026"
+source_attribution = "Salim Ismail with contributors, The Organizational Singularity, OS Outline v25, OpenExO Pro, June 2026"
 tags = [
   "exo-3.0",
   "intelligence-stack",
@@ -105,7 +105,18 @@ tags = [
   "decision-boundary-map",
   "light-edge-mode",
   "portfolio-math",
-  "sovereign-stack-playbook"
+  "sovereign-stack-playbook",
+  "data-plane-inversion",
+  "decision-trace",
+  "context-graph",
+  "log-is-the-agent",
+  "log-lock-in",
+  "demote-dont-abolish",
+  "sap-business-data-cloud",
+  "semantic-data-products",
+  "token-capital",
+  "frontier-ecosystem",
+  "nadella"
 ]
 
 [defaults]

@@ -64,6 +64,24 @@ See `shape-form.md` for full component definitions and scoring.
 
 **The crossing rule:** building the high-tempo DRIVE drivetrain without engineering the resilient SHAPE chassis is the named Chapter 3 failure mode. The v24 phrasing of the stakes, from the Chapter 6 anchor and Appendix E: *"DRIVE without SHAPE is a fuse waiting for a spark."*
 
+## Cognitive Captivity and the Nadella Frontier-Ecosystem Validation (v25)
+
+Design Condition 3 (Model Sovereignty and Governed Autonomy) and the DRIVE-V cognitive-captivity callout both rest on one move: own the loop, not just the model. v25 adds the strongest possible external witness to that move, and it comes from inside the frontier itself.
+
+Satya Nadella, whose company sells both the models and the managed agents, argues that the real test of a firm's control is whether it can swap out a *generalist* model without losing the *company veteran* expertise encoded in its own learning loop.[^nadella] When the model vendor tells you to own the loop so you can replace his model, believe him. Note the asymmetry in his advice: the moment the model becomes swappable, the platform underneath your loop (identity, permissions, evals, memory, model routing) becomes the durable asset, and the vendor would very much like that platform to be his. Owning the loop means owning that layer too, not just multi-sourcing the model above it. Otherwise you have only traded one landlord for another. This is the same logic the new Chapter 9 extends one layer deeper: own your agent logs, because whoever owns the log owns the agent (`references/edge-deployment.md`).
+
+Nadella also names the macroeconomic stake. A frontier without an ecosystem is not stable. A world where a handful of models capture every industry's expertise and all of its returns has "no societal permission"; the only durable equilibrium is one where every organization owns the learning loop that encodes its institutional knowledge. The firm that owns its loop is not just defending a moat. It is holding up its corner of the only equilibrium that lasts.
+
+### The 2026 Convergence (v25 row added)
+
+The destination this book describes is now being validated by the people who sell the inputs to it. Read the convergence as evidence the direction is right, not as endorsement of any vendor's route.
+
+| Source | What they shipped or said | What it validates |
+|---|---|---|
+| **SAP (Sapphire, May 2026)** | The "Autonomous Enterprise": 50+ Joule Assistants over 200+ agents; Business Data Cloud opening the data layer | The destination (agents run the processes; data decouples), while disputing the route (suite in the core) |
+| **Salesforce (April 2026)** | Headless 360 + Agentforce consumption pricing | Per-outcome economics; software priced by completed work, not seats |
+| **Nadella / Microsoft (June 2026)** | "A frontier without an ecosystem is not stable": own-your-loop, swap-the-model-keep-the-veteran, human capital + token capital, anti-monopoly | Own-your-loop sovereignty and the LEARN-layer / Value Moat thesis, from a frontier-model CEO |
+
 ## The Five Design Conditions
 
 Five conditions must hold for ExO 3.0 to function. Treat as principled anchors, not KPIs:
@@ -100,7 +118,7 @@ Cross-organizational agent transaction requires three explicit bounds:
 2. **Data-object metadata that travels with the data.** What it is, who issued it, how it may be used, the legal terms, and how disputes resolve. The receiving firm's agents read the metadata before acting.
 3. **A liability framework codesigned in advance, not in court.** Agreed error budgets, mitigation paths, and machine-readable arbitration mechanisms before any agent transacts.
 
-Accountability, not capability, becomes the scarce resource and the ultimate Value Moat. **Balkanization risk** is retained in v24: cognitive blocs (US, China, EU, with India added in Chapter 12) are the most likely near-term trajectory; design for a fragmented world first.
+Accountability, not capability, becomes the scarce resource and the ultimate Value Moat. The mechanism that makes accountability auditable is the **replayable log**: because an agent can be resumed from its append-only event history alone, that history is the record that lets a firm reconstruct, after the fact, exactly what an agent saw, decided, and did. Own the log and accountability is a query; rent it and accountability is a request to someone else's legal team (`references/edge-deployment.md`, v25). **Balkanization risk** is retained: cognitive blocs (US, China, EU, with India added in Chapter 12) are the most likely near-term trajectory; design for a fragmented world first.
 
 > Jerry Michalski: *"Scarcity equals abundance minus trust."* Scale trust, solve for abundance.
 
@@ -162,3 +180,5 @@ If you remember one thing: **the Intelligence Stack is the engine block.** Every
 If you remember two things: **the drivetrain needs the chassis.** DRIVE without SHAPE is a fuse waiting for a spark.
 
 If you remember three things: **Destination, Operating System, Playbook.** ExO 3.0, the Intelligence Stack, REWRITE. The rest of the framework is in service of those three.
+
+[^nadella]: Satya Nadella, *"A frontier without an ecosystem is not stable,"* posted on X, June 2026. The Microsoft CEO argues every firm must build both *human capital* (knowledge, judgment, relationships, ingenuity, pattern recognition) and *token capital* (the AI capability it builds and owns); that the opportunity is not picking the best model but building a compounding *learning loop* on top of models ("you can offload a task, or even a job, but you can never offload your learning"); that the test of sovereignty is swapping a generalist model without losing the "company veteran" expertise in your learning system; and that "a frontier without an ecosystem is not stable," a world where a few models capture all value has "no societal permission." https://x.com/satyanadella/status/2066182223213293753

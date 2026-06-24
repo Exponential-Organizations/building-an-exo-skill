@@ -2,7 +2,7 @@
 
 > Template, Appendix F. Ten governance questions a CEO hands the CIO and CISO *before* funding an Edge Twin, to evaluate whether the system can be governed, secured, and audited. Score each Red, Amber, or Green under the **Readiness Gate Protocol (v24)**: any **Red** rating across Questions 5, 6, 7, or 8 (Leakage, Identity, Reversibility, Accountability) represents an absolute block. In the v24 wording, "The build must be legally halted until the technical architecture is reinforced to satisfy these essential SHAPE controls. Skip them, and you have built the PocketOS pattern: a high-tempo drivetrain with no structural chassis."
 
-**Source:** *The Organizational Singularity*, OS Outline v24, Appendix F. Salim Ismail with contributors, June 2026.
+**Source:** *The Organizational Singularity*, OS Outline v25, Appendix F. Salim Ismail with contributors, June 2026.
 
 ---
 
