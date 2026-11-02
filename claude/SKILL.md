@@ -254,42 +254,6 @@ Additional v24 sources cited in this skill: Harang Ju, *When Coordination Is Avo
 
 This skill is an operational adaptation for AI created by Kent Langley for ExO Builders. It is not a substitute for the source. Anyone applying the material in client engagements, teaching, publishing, or commercial settings should credit the authors and cite the source at `https://openexo.com/organizational-singularity`.
 
-## Related Skills
-
-When applying building-an-exo, also consult:
-
-**Destination and strategy:**
-- `/skills/clarifying-vision/SKILL.md` — for authoring MTP-as-protocol and the Five Design Conditions in Step 1
-- `/skills/designing-business-model/SKILL.md` — for naming the revenue engine the Destination Architecture must produce
-- `/skills/planning-quarterly-strategy/SKILL.md` — for laddering REWRITE waves into a 13-week operating cadence
-- `/skills/planning-scale-exit/SKILL.md` — for staging Direct → Edge Mode transitions and post-Edge-Twin valuation moves
-
-**Intelligence Stack and AI operating model:**
-- `/skills/adopting-ai-thinking/SKILL.md` — for the human+AI mental model the Stack assumes
-- `/skills/designing-ai-workflows/SKILL.md` — for chaining MVIS agents into compound leverage
-- `/skills/designing-human-ai-handoffs/SKILL.md` — for the Permission Envelope and Fiduciary Wedge boundary
-- `/skills/engineering-prompts/SKILL.md` — for the Agent Specification's Purpose and Eval Suite fields
-- `/skills/selecting-ai-tools/SKILL.md` — for foundation-model and orchestration choices that avoid cognitive captivity
-- `/skills/validating-ai-outputs/SKILL.md` — for the Trusted Evals pillar of GOVERN/ASSURE
-- `/skills/evaluating-build-buy-automate/SKILL.md` — for the Task Decomposition Matrix disposition column
-- `/skills/automating-workflows/SKILL.md` — for the candidate workflows Wave 1 migrates first
-
-**Org, talent, and operations (SHAPE side):**
-- `/skills/building-talent-matrix/SKILL.md` — for the Sliding Talent Ratios and Middle 60% absorption math
-- `/skills/managing-people/SKILL.md` — for the People Side of Parallel Runs
-- `/skills/managing-founder-capacity/SKILL.md` — for the founder-as-bottleneck check in Direct Mode
-- `/skills/managing-execution-tempo/SKILL.md` — for REWRITE wave cadence and Decision Handover Waves
-- `/skills/building-onboarding-systems/SKILL.md` — for re-onboarding humans alongside agents
-- `/skills/building-operations-systems/SKILL.md` — for converting REWRITE outputs into durable SOPs
-- `/skills/building-knowledge-batteries/SKILL.md` — for the institutional memory layer the Stack reads from
-
-**Defensibility and systems lens:**
-- `/skills/building-competitive-moats/SKILL.md` — for the Value Moat sources in DRIVE
-- `/skills/applying-systems-thinking/SKILL.md` — for diagnosing immune-system signals and leverage points
-
-**Prose:**
-- `/skills/writing-copy/SKILL.md` — applies automatically to any written output (MTP statement, board memo, transition comms)
-
 ## Triggers
 
 - Founder or CEO is asking "what would we build today, with AI, from scratch?"
