@@ -9,7 +9,7 @@ Usage:
   scripts/release.sh [options]
 
 Options:
-  --version VERSION   Override version (default: read from config.toml)
+  --version VERSION   Override version (default: read from claude/SKILL.md frontmatter)
   --notes TEXT        Release notes (default: short auto-generated blurb)
   --notes-file PATH   Read release notes from a file
   --replace           Delete an existing release/tag before creating a new one
@@ -26,7 +26,7 @@ EOF
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CLAUDE_SKILL="$REPO_ROOT/dist/building-an-exo-claude.skill"
 CODEX_SKILL="$REPO_ROOT/dist/building-an-exo-codex.skill"
-CONFIG="$REPO_ROOT/claude/config.toml"
+SKILL_MD="$REPO_ROOT/claude/SKILL.md"
 GITHUB_REPO="Exponential-Organizations/building-an-exo-skill"
 
 VERSION=""
@@ -77,13 +77,13 @@ for f in "$CLAUDE_SKILL" "$CODEX_SKILL"; do
 done
 
 if [[ -z "$VERSION" ]]; then
-  if [[ ! -f "$CONFIG" ]]; then
-    echo "Missing config.toml and no --version provided." >&2
+  if [[ ! -f "$SKILL_MD" ]]; then
+    echo "Missing claude/SKILL.md and no --version provided." >&2
     exit 1
   fi
-  VERSION="$(grep -E '^version = ' "$CONFIG" | head -1 | sed -E 's/^version = "([^"]+)".*/\1/')"
+  VERSION="$(grep -E '^version: ' "$SKILL_MD" | head -1 | sed -E 's/^version: *"?([^"[:space:]]+)"?.*/\1/')"
   if [[ -z "$VERSION" ]]; then
-    echo "Could not read version from $CONFIG" >&2
+    echo "Could not read version from $SKILL_MD" >&2
     exit 1
   fi
 fi
