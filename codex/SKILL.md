@@ -180,7 +180,7 @@ This skill is an operational adaptation for AI created by Kent Langley for ExO B
 
 ### Tier-Appropriate Application
 
-- MUST adjust depth and ambition to the OpenExO ICP tier (see `/org-config/icp.md`).
+- MUST adjust depth and ambition to the OpenExO ICP tier.
 - **Tier 2 (≤50 employees, ≤$2M revenue), Direct Mode.** Apply REWRITE to the whole company. Stand up MVIS in week one. Use a 90-Day Sprint on the highest-coordination workflow. The founder can run BACKCAST themselves with a one-day workshop. SHAPE Human Architecture is small-team work; absorption math is simpler but no less honest. **Existence proof**: Peter Steinberger built the first version of OpenClaw on a single Friday evening in November 2025, ran 4–10 agents in parallel, pushed 6,600+ commits in January 2026 alone, surpassed 145,000 GitHub stars within weeks with no team and no revenue, and received acquisition bids from Meta and OpenAI in the same window. Solo-founded startups are 36.3% of new ventures. Direct Mode is not a thought experiment; it is the modal new company.
 - **Tier 3 ($2M–$10M, 20–80 employees), Direct or Light Edge.** If headcount is climbing past 50 with managerial layers forming, spawn the Edge Twin proactively before the immune system hardens. Run DRIVE and SHAPE assessments quarterly. CAIO appointment becomes a real role at this stage, not a hat.
 - **Tier 4–5 ($10M+, 80+ employees), Edge Mode mandatory.** Spawn a 3–5 person Edge Twin reporting to the CEO. Board-level agentic governance framework (the Sarbanes-Oxley Moment) with quarterly review of Organizational Half-Life. Treat Sliding Talent Ratios as portfolio-level capital allocation. Sovereign AI capability becomes a strategic discussion, not a vendor-selection exercise.
